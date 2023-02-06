@@ -1,0 +1,124 @@
+---
+title: CSS Fundamentals Part 1
+slug: css-fundamentals-part-1
+excerpt: CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
+imageUrl: https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+author: Huy Nguyen, Software Engineer
+week: 1-2
+publishOn: 1675677703
+---
+
+## I. Introduction
+
+### 1. What is CSS?
+
+- CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
+
+### 2. Purpose of CSS
+
+- To separate the presentation and styling of a web page from its content, making it easier to maintain and update the design of a website.
+- To control the layout and appearance of a web page, including font, color, size, and spacing.
+- To create visual effects, such as drop-down menus, hover effects, and animations, that enhance the user experience.
+- To ensure consistency in the look and feel of a website, making it easier for users to navigate and understand the content.
+- To make web pages more accessible, by allowing developers to control the visual appearance of web pages for users with disabilities.
+- To make web pages load faster, by reducing the amount of code required to style a page and making it easier for browsers to render pages.
+
+## II. CSS Syntax
+
+### 1. CSS Selectors:
+
+CSS selectors allow you to select and style HTML elements on a web page
+
+- Element selector: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
+
+```css
+p {
+  font-size: 16px;
+  color: #333;
+}
+```
+
+- Class selector: Selects elements based on their class attribute. Classes are defined by the developer and can be used multiple times on a page
+
+```css
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+```
+
+- ID selector: Selects elements based on their id attribute. IDs are unique and can only be used once on a page
+
+```css
+#header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+```
+
+- Attribute selector: Selects elements based on their attribute values, such as "a" elements with a "href" attribute that starts with "https"
+
+```css
+a[href^="https"] {
+  color: blue;
+}
+```
+
+- Descendant selector: Selects elements that are descendants of other elements
+
+```css
+ul li {
+  list-style-type: square;
+}
+```
+
+- Child selector: Selects elements that are direct children of other elements
+
+```css
+ol > li {
+  list-style-type: decimal;
+}
+```
+
+### 2. CSS Properties
+
+CSS properties assign a style or behavior to an HTML element.
+
+- `font-size`: specifies the size of the text. Example: `font-size: 16px`;
+- `color`: sets the text color. Example: `color: blue`;
+- `background-color`: sets the background color of an element. Example: `background-color: yellow`;
+- `text-align`: sets the horizontal alignment of text. Example: `text-align: center`;
+- `padding`: adds space within an element. Example: `padding: 10px`;
+- `margin`: adds space outside of an element. Example: `margin: 10px`;
+- `border`: adds a border around an element. Example: `border: 1px solid black`;
+- `display`: sets how an element should be displayed. Example: `display: block`;
+- `width`: sets the width of an element. Example: `width: 100px`;
+- `height`: sets the height of an element. Example: `height: 100px`;
+
+### 3. CSS Values
+
+CSS values are the data assigned to CSS properties
+
+- `Length values`: Length values define the size of an element, such as height, width, padding, and margin. Length values can be expressed in pixels (px), em, rem, %, etc. Example: `width: 500px`;
+- `Color values`: Color values define the color of an element's text or background. Color values can be expressed as keywords (e.g. "red"), hexadecimal values (e.g. "#ff0000"), or RGB values (e.g. "rgb(255, 0, 0)"). Example: `color: #ff0000`;
+- `URL values`: URL values are used to specify the source of an image or a web page. URL values are expressed as a string starting with "url(...)" followed by the path to the resource. Example: `background-image: url(https://example.com/image.png)`;
+- `Percentage values`: Percentage values are used to specify sizes or positions as a percentage of the parent element. Example: `width: 50%`;
+- `Keyword values`: Keyword values are predefined values that determine how elements should be displayed or positioned. Example: `display: block`;
+- `Time values`: Time values are used to specify durations, such as the time it takes for an animation to complete. Time values are expressed in seconds (s) or milliseconds (ms). Example: `transition-duration: 500ms`;
+- `Angle values`: Angle values are used to specify rotations and are expressed in degrees (deg), radians (rad), or gradians (grad). Example: `transform:` rotate(45deg);
+
+## III. CSS Box Model
+
+The CSS Box Model is a layout model used in web design that describes the rectangular boxes that are generated for elements in the document tree. Each box has content, padding, borders, and margins, and these boxes can be styled and positioned to create the desired layout.
+
+The CSS Box Model consists of the following elements:
+
+- `Content`: The content area is where the actual content of an element is displayed.
+- `Padding`: The padding is the area surrounding the content, between the content and the border. It can be styled using the padding property. Example: `padding:` 20px;
+- `Border`: The border is the line surrounding the content and padding. It can be styled using the border property. Example: `border: 1px solid black`;
+- `Margin`: The margin is the area outside the border and defines the space between the current box and other elements. It can be styled using the margin property. Example: `margin: 20px`;
+
+**Note**: It is important to understand the CSS Box Model in order to properly style and position elements on a web page. The total width and height of a box can be calculated as the sum of its content width/height, plus twice the values of its padding, plus twice the values of its border.
+
+![Box Model](https://funix.edu.vn/wp-content/uploads/2022/02/boxmodel.png)
