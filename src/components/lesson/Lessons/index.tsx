@@ -26,7 +26,7 @@ const Lessons = async () => {
             })}
           </ul>
           {/* Pagination */}
-          <div className="flex items-center justify-between py-1">
+          {/* <div className="flex items-center justify-between py-1">
             <button className="flex items-center gap-2 group">
               <ArrowLongLeftIcon className="w-5 h-5 transition group-hover:-translate-x-1" />
               Prev
@@ -35,7 +35,7 @@ const Lessons = async () => {
               Next
               <ArrowLongRightIcon className="w-5 h-5 transition group-hover:translate-x-1" />
             </button>
-          </div>
+          </div> */}
         </div>
       </Container>
     </section>
