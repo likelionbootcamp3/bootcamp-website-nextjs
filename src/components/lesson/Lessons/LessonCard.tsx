@@ -4,12 +4,12 @@ import { ILesson } from "@/interfaces/lesson";
 
 const LessonCard = ({ title, excerpt, publishOn, slug, week }: ILesson) => {
   return (
-    <Link href={`/lessons/${slug}`} className="text-[#3c4856c2]">
-      <div className="mb-2 flex items-start justify-between gap-6">
+    <Link href={`/lessons/${slug}`} className="text-body-light">
+      <div className="flex items-start justify-between gap-6 mb-2">
         <h2 className="text-xl font-medium text-black">
           Week {week}: {title}
         </h2>
-        <time className="shrink-0 px-2 text-sm leading-loose">
+        <time className="px-2 text-sm leading-loose shrink-0">
           {publishOn ? getFullDate(publishOn) : "Now"}
         </time>
       </div>

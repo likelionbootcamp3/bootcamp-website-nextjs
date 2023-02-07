@@ -1,15 +1,16 @@
 import { BRAND_NAME } from "@/constants";
+import Container from "../Container";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="max-w-screen-md px-4 mx-auto md:px-6">
-        <div className="flex items-center justify-center py-6 border-t">
-          <p className="text-sm text-[#3c4856c2]">
+      <Container maxWidth="md">
+        <div className="flex items-center justify-center border-t py-6">
+          <p className="text-sm text-body-light">
             © {BRAND_NAME} | Developed by <strong>Huy Nguyen</strong>{" "}
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

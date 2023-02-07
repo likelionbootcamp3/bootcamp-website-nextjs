@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Image from "next/image";
 import { ReactNode, useRef, useState } from "react";
 
 interface ICopyToClipboard {

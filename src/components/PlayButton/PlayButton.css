@@ -1,0 +1,108 @@
+.play-btn-box {
+  border: 2px rgba(255, 255, 255, 0.11) solid;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.play-btn-line1 {
+  border: 2px rgba(255, 255, 255, 0.451) solid;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right-color: transparent;
+}
+.play-btn-line2 {
+  border: 2px rgba(255, 255, 255, 0.451) solid;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right-color: transparent;
+}
+.play-button {
+  background-color: rgb(255, 255, 255);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: 0.3s all;
+}
+
+.play-button:hover {
+  opacity: 0.9;
+}
+
+.play-button svg {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+#line1 {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#line2 {
+  animation: rotation1 3s infinite linear;
+}
+
+@keyframes rotation1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .play-btn-box {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .play-btn-line1 {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .play-btn-line2 {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .play-button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .play-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

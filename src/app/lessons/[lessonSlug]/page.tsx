@@ -2,6 +2,7 @@ import { getLesson, getLessons } from "@/services/lesson";
 import MDXRemoteWrapper from "@/components/mdx/MDXRemoteWrapper";
 import LessonDetailHeading from "@/components/lesson/LessonDetailHeading";
 import ProgressBar from "@/components/ProgressBar";
+import Container from "@/components/Container";
 
 export interface LessonParams {
   params: { lessonSlug: string };
@@ -21,16 +22,15 @@ const LessonDetail = async ({ params }: LessonParams) => {
 
   return (
     <>
-      <ProgressBar />
       <article className="mx-auto prose max-w-none lg:prose-lg">
-        {/* Introduction */}
-        <div className="max-w-screen-lg px-4 mx-auto md:px-6 ">
+        {/* Heading */}
+        <Container maxWidth="lg">
           <LessonDetailHeading {...lesson.frontmatter} />
-        </div>
+        </Container>
         {/* Body */}
-        <div className="max-w-screen-lg px-4 mx-auto">
+        <Container maxWidth="lg">
           <MDXRemoteWrapper {...lesson} />
-        </div>
+        </Container>
       </article>
     </>
   );

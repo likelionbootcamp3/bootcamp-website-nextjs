@@ -15,7 +15,7 @@ const LessonDetailHeading = ({ title, week, imageUrl }: ILesson) => {
           alt={title || "Banner"}
           height={300}
           width={900}
-          className="object-cover object-center w-full h-full rounded-lg"
+          className="object-cover object-center w-full h-full rounded-xl"
           priority
         />
       </div>

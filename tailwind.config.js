@@ -8,6 +8,7 @@ module.exports = {
         secondary: "var(--secondary-color)",
         background: "var(--background-color)",
         body: "var(--text-color)",
+        "body-light": "var(--text-color-light)",
         neutral: "var(--neutral-color-1)",
       },
       height: {

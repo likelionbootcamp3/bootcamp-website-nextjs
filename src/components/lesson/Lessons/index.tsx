@@ -6,15 +6,16 @@ import {
 import { getLessons } from "@/services/lesson";
 import { v4 as uuid } from "uuid";
 import _ from "lodash";
+import Container from "@/components/Container";
 
 const Lessons = async () => {
   const lessons = await getLessons();
 
   return (
     <section className="h-full">
-      <div className="h-full max-w-screen-md px-4 mx-auto md:px-6">
+      <Container maxWidth="md">
         {/* Lessons */}
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full py-4">
           <ul className="flex flex-col gap-10 grow">
             {_.orderBy(
               lessons,
@@ -25,7 +26,7 @@ const Lessons = async () => {
             })}
           </ul>
           {/* Pagination */}
-          <div className="flex items-center justify-between py-2 mt-4">
+          <div className="flex items-center justify-between py-1">
             <button className="flex items-center gap-2 group">
               <ArrowLongLeftIcon className="w-5 h-5 transition group-hover:-translate-x-1" />
               Prev
@@ -36,7 +37,7 @@ const Lessons = async () => {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

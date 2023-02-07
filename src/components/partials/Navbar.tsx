@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Container from "../Container";
 
 const Navbar = () => {
   const [navScrollActive, setNavScrollActive] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
         navScrollActive && "bg-white/75 shadow-lg backdrop-blur-lg"
       )}
     >
-      <div className="max-w-screen-md px-4 mx-auto md:px-6">
+      <Container maxWidth="md">
         <div
           className={clsx(
             "flex h-navbar items-center justify-center transition-all duration-500",
@@ -41,7 +42,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
     </nav>
   );
 };

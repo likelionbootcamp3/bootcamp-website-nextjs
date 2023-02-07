@@ -1,6 +1,7 @@
 import Navbar from "@/components/partials/Navbar";
 import { Poppins } from "@next/font/google";
 import "highlight.js/styles/atom-one-dark.css";
+import "react-modal-video/scss/modal-video.scss";
 import "@/styles/globals.css";
 import clsx from "clsx";
 import Footer from "@/components/partials/Footer";
@@ -26,7 +27,7 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <main className="py-4 grow">{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
