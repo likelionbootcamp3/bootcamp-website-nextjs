@@ -22,7 +22,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "flex h-full min-h-screen flex-col bg-background pt-[var(--navbar-height)] text-base text-body",
+          "flex h-full min-h-screen flex-col bg-background pt-[var(--navbar-height)] text-base text-body dark:bg-black",
           bodyFont.className
         )}
       >

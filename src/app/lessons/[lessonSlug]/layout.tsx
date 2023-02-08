@@ -5,7 +5,7 @@ const LessonDetailLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <ProgressBar />
-      {children}
+      <div className="py-4">{children}</div>
     </>
   );
 };

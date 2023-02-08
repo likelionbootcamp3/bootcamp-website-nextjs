@@ -4,6 +4,7 @@ export interface ILesson {
   excerpt?: string;
   imageUrl?: string;
   author?: string;
-  week?: string;
+  day?: string;
   publishOn?: number;
+  readingTime?: string;
 }

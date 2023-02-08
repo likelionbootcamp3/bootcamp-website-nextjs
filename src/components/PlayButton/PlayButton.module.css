@@ -1,4 +1,4 @@
-.play-btn-box {
+.playBtnBox {
   border: 2px rgba(255, 255, 255, 0.11) solid;
   border-radius: 50%;
   width: 12rem;
@@ -8,7 +8,7 @@
   justify-content: center;
   position: relative;
 }
-.play-btn-line1 {
+.playBtnLine1 {
   border: 2px rgba(255, 255, 255, 0.451) solid;
   border-radius: 50%;
   width: 10rem;
@@ -17,8 +17,9 @@
   align-items: center;
   justify-content: center;
   border-right-color: transparent;
+  animation: rotation 4s infinite linear;
 }
-.play-btn-line2 {
+.playBtnLine2 {
   border: 2px rgba(255, 255, 255, 0.451) solid;
   border-radius: 50%;
   width: 7rem;
@@ -27,8 +28,9 @@
   align-items: center;
   justify-content: center;
   border-right-color: transparent;
+  animation: rotation1 3s infinite linear;
 }
-.play-button {
+.playBtn {
   background-color: rgb(255, 255, 255);
   width: 5rem;
   height: 5rem;
@@ -45,17 +47,13 @@
   transition: 0.3s all;
 }
 
-.play-button:hover {
+.playBtn:hover {
   opacity: 0.9;
 }
 
-.play-button svg {
+.playBtn svg {
   width: 1.875rem;
   height: 1.875rem;
-}
-
-#line1 {
-  animation: rotation 4s infinite linear;
 }
 
 @keyframes rotation {
@@ -65,10 +63,6 @@
   to {
     transform: rotate(359deg);
   }
-}
-
-#line2 {
-  animation: rotation1 3s infinite linear;
 }
 
 @keyframes rotation1 {
@@ -81,27 +75,27 @@
 }
 
 @media (max-width: 768px) {
-  .play-btn-box {
+  .playBtnBox {
     width: 9rem;
     height: 9rem;
   }
 
-  .play-btn-line1 {
+  .playBtnLine1 {
     width: 7rem;
     height: 7rem;
   }
 
-  .play-btn-line2 {
+  .playBtnLine2 {
     width: 5rem;
     height: 5rem;
   }
 
-  .play-button {
+  .playBtn {
     width: 3.5rem;
     height: 3.5rem;
   }
 
-  .play-button svg {
+  .playBtn svg {
     width: 1.5rem;
     height: 1.5rem;
   }

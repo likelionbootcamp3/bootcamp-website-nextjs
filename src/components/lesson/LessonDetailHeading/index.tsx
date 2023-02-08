@@ -1,13 +1,25 @@
 import { BACKUP_LESSON_BANNER } from "@/constants";
 import { ILesson } from "@/interfaces/lesson";
+import { getFullDate } from "@/lib/date";
 import Image from "next/image";
 
-const LessonDetailHeading = ({ title, week, imageUrl }: ILesson) => {
+const LessonDetailHeading = ({
+  title,
+  day,
+  imageUrl,
+  readingTime,
+  publishOn,
+}: ILesson) => {
   return (
     <div className="text-center">
       <div>
-        <p className="leading-none">Week {week}</p>
+        <p className="font-medium uppercase leading-none text-body-light">
+          Day {day}
+        </p>
         <h1>{title}</h1>
+        <p className="text-sm text-body-light">
+          {publishOn ? getFullDate(publishOn) : "Now"} - {readingTime}
+        </p>
       </div>
       <div className="h-[300px]">
         <Image
@@ -15,7 +27,7 @@ const LessonDetailHeading = ({ title, week, imageUrl }: ILesson) => {
           alt={title || "Banner"}
           height={300}
           width={900}
-          className="object-cover object-center w-full h-full rounded-xl"
+          className="h-full w-full rounded-xl object-cover object-center"
           priority
         />
       </div>

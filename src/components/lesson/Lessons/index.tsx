@@ -7,6 +7,7 @@ import { getLessons } from "@/services/lesson";
 import { v4 as uuid } from "uuid";
 import _ from "lodash";
 import Container from "@/components/Container";
+import { orderByDay } from "@/lib/lesson";
 
 const Lessons = async () => {
   const lessons = await getLessons();
@@ -17,11 +18,7 @@ const Lessons = async () => {
         {/* Lessons */}
         <div className="flex flex-col h-full py-4">
           <ul className="flex flex-col gap-10 grow">
-            {_.orderBy(
-              lessons,
-              [(lesson) => Number(lesson.frontmatter?.publishOn)],
-              ["desc"]
-            ).map((lesson) => {
+            {orderByDay(lessons).map((lesson) => {
               return <LessonCard key={uuid()} {...lesson.frontmatter} />;
             })}
           </ul>

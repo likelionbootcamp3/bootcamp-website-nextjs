@@ -4,7 +4,7 @@ slug: css-fundamentals-part-1
 excerpt: CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
 imageUrl: https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
 author: Huy Nguyen, Software Engineer
-week: 1-2
+day: 2
 publishOn: 1675677703
 ---
 
@@ -23,13 +23,40 @@ publishOn: 1675677703
 - To make web pages more accessible, by allowing developers to control the visual appearance of web pages for users with disabilities.
 - To make web pages load faster, by reducing the amount of code required to style a page and making it easier for browsers to render pages.
 
-## II. CSS Syntax
+## II. Inline, Internal and External CSS
+
+CSS can be added to an HTML document in 3 ways:
+
+- `Inline`: CSS styles are added directly to an HTML element using the "style" attribute. This method is not recommended as it does not allow for easy maintenance or the separation of presentation and content.
+
+```html
+<p style="color: blue;">This is a blue paragraph.</p>
+```
+
+- `Internal`: CSS styles are added within the head section of an HTML document using a "style" tag. This method is useful for small websites, but it is not recommended for larger websites as the CSS becomes difficult to maintain.
+
+```html
+<head>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p>This is a blue paragraph.</p>
+</body>
+```
+
+- `External`: CSS styles are added in a separate file with a ".css" extension, and the file is linked to the HTML document using a "link" tag in the head section. This is the recommended method for larger websites as it allows for easy maintenance and
+
+## III. CSS Syntax
 
 ### 1. CSS Selectors:
 
 CSS selectors allow you to select and style HTML elements on a web page
 
-- Element selector: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
+- `Element selector`: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
 
 ```css
 p {
@@ -38,7 +65,7 @@ p {
 }
 ```
 
-- Class selector: Selects elements based on their class attribute. Classes are defined by the developer and can be used multiple times on a page
+- `Class selector`: Selects elements based on their class attribute. Classes are defined by the developer and can be used multiple times on a page
 
 ```css
 .highlight {
@@ -47,7 +74,7 @@ p {
 }
 ```
 
-- ID selector: Selects elements based on their id attribute. IDs are unique and can only be used once on a page
+- `ID selector`: Selects elements based on their id attribute. IDs are unique and can only be used once on a page
 
 ```css
 #header {
@@ -57,7 +84,7 @@ p {
 }
 ```
 
-- Attribute selector: Selects elements based on their attribute values, such as "a" elements with a "href" attribute that starts with "https"
+- `Attribute selector`: Selects elements based on their attribute values, such as "a" elements with a "href" attribute that starts with "https"
 
 ```css
 a[href^="https"] {
@@ -65,7 +92,7 @@ a[href^="https"] {
 }
 ```
 
-- Descendant selector: Selects elements that are descendants of other elements
+- `Descendant selector`: Selects elements that are descendants of other elements
 
 ```css
 ul li {
@@ -73,7 +100,7 @@ ul li {
 }
 ```
 
-- Child selector: Selects elements that are direct children of other elements
+- `Child selector`: Selects elements that are direct children of other elements
 
 ```css
 ol > li {
@@ -108,7 +135,337 @@ CSS values are the data assigned to CSS properties
 - `Time values`: Time values are used to specify durations, such as the time it takes for an animation to complete. Time values are expressed in seconds (s) or milliseconds (ms). Example: `transition-duration: 500ms`;
 - `Angle values`: Angle values are used to specify rotations and are expressed in degrees (deg), radians (rad), or gradians (grad). Example: `transform:` rotate(45deg);
 
-## III. CSS Box Model
+## IV. CSS Text
+
+### 1. Font family
+
+The font-family property in CSS is used to specify the type of font to be used for the text.
+
+```css
+p {
+  font-family: Arial, sans-serif;
+}
+```
+
+In the example above, `font-family` is set to `Arial` and the generic font-family `sans-serif` is specified as a fallback in case the specific font is not available on the user's device.
+
+### 2. Font size
+
+The font-size property in CSS is used to specify the size of the font for the text. The size can be specified in various units, including `px`, `rem`, `em`, and others.
+
+```css
+p {
+  font-size: 16px;
+}
+```
+
+You can also use rem units, which are relative to the font size of the root element:
+
+```css
+p {
+  font-size: 1.5rem;
+}
+```
+
+In this example, font-size is set to 1.5rem, meaning it will be 1.5 times the size of the root element's font size.
+
+### 3. Font weight
+
+The `font-weight` property in CSS is used to specify the boldness or thickness of the font for the text. The font weight can be specified as a numerical value between 100 and 900, or as one of the predefined keywords `normal`, `bold`, `bolder`, or `lighter`.
+
+```css
+p {
+  font-weight: bold;
+}
+```
+
+In the example above, `font-weight` is set to `bold`, causing the text to be displayed in bold font weight.
+
+```css
+p {
+  font-weight: 700;
+}
+```
+
+In this example, `font-weight` is set to `700`, causing the text to be displayed in a font weight of 700.
+
+### 4. Font style
+
+The `font-style` property in CSS is used to specify the style of the font for the text. The font style can be `normal`, `italic`, or `oblique`.
+
+```css
+p {
+  font-style: italic;
+}
+```
+
+In the example above, `font-style` is set to `italic`, causing the text to be displayed in italic style.
+
+### 5. Text decoration
+
+The `text-decoration` property in CSS is used to specify the decoration applied to the text. Some of the most common values for `text-decoration` include `underline`, `overline`, `line-through`, and `none`.
+
+```css
+a {
+  text-decoration: underline;
+}
+```
+
+In the example above, `text-decoration` is set to `underline`, causing the text to be displayed with an underline.
+
+### 6. Text transform
+
+The CSS "transform" property allows you to modify the appearance of an element by scaling, rotating, translating (moving), or skewing it.
+
+- Scale:
+
+```css
+#example {
+  transform: scale(2);
+}
+```
+
+This will make the element with an id of "example" twice as large as its original size.
+
+- Rotate:
+
+```css
+#example {
+  transform: rotate(45deg);
+}
+```
+
+This will rotate the element with an id of "example" 45 degrees clockwise.
+
+- Translate:
+
+```css
+#example {
+  transform: translate(100px, 50px);
+}
+```
+
+This will move the element with an id of "example" 100 pixels to the right and 50 pixels down.
+
+- Skew:
+
+```css
+#example {
+  transform: skew(10deg, 5deg);
+}
+```
+
+This will make the element with an id of "example" 10 degrees horizontally skewed and 5 degrees vertically skewed.
+
+Note that you can combine multiple transform functions as well:
+
+```css
+#example {
+  transform: scale(2) rotate(45deg) translate(100px, 50px) skew(10deg, 5deg);
+}
+```
+
+### 7. Text Shadow
+
+The CSS "text-shadow" property allows you to add a shadow effect to text.
+
+```css
+p {
+  text-shadow: 2px 2px #ff0000;
+}
+```
+
+This will add a red shadow 2 pixels to the right and 2 pixels down from the text. The first value is the horizontal offset, the second value is the vertical offset, and the color value is the shadow color.
+
+You can also add multiple shadows to the same text:
+
+```css
+p {
+  text-shadow: 2px 2px #ff0000, -2px -2px #00ff00, 1px 1px #0000ff;
+}
+```
+
+This will add a red shadow 2 pixels to the right and 2 pixels down, a green shadow 2 pixels to the left and 2 pixels up, and a blue shadow 1 pixel to the right and 1 pixel down from the text.
+
+## V. CSS Color
+
+The CSS "color" property sets the color of text.
+
+- Using color names:
+
+```css
+p {
+  color: red;
+}
+```
+
+This will set the color of text inside `<p>` elements to red.
+
+- Using hexadecimal values:
+
+```css
+p {
+  color: #ff0000;
+}
+```
+
+This will set the color of text inside `<p>` elements to red.
+
+- Using RGB values:
+
+```css
+p {
+  color: rgb(255, 0, 0);
+}
+```
+
+This will set the color of text inside `<p>` elements to red.
+
+- Using RGBA values:
+
+```css
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+```
+
+This will set the color of text inside `<p>` elements to semi-transparent red. The last value, `0.5`, is the alpha value that determines the opacity of the color.
+
+## VI. Pseudo-classes
+
+Pseudo-classes in CSS allow you to select and style an element based on its state or relationship with other elements.
+
+- `:hover`: Selects an element when the user hovers over it with a mouse.
+
+```css
+a:hover {
+  color: blue;
+}
+```
+
+- `:active`: Selects an element when it is being actively clicked or pressed.
+
+```css
+button:active {
+  background-color: yellow;
+}
+```
+
+- `:focus`: Selects an element when it has focus, such as when the user tabs to it or clicks on it.
+
+```css
+input:focus {
+  outline: 2px solid blue;
+}
+```
+
+- `:first-child`: Selects an element that is the first child of its parent.
+
+```css
+li:first-child {
+  font-weight: bold;
+}
+```
+
+- `:nth-child(n)`: Selects an element that is the nth child of its parent.
+
+```css
+li:nth-child(2) {
+  background-color: yellow;
+}
+```
+
+- `:not(selector)`: Selects elements that do not match the specified selector.
+
+```css
+:not(.highlight) {
+  color: gray;
+}
+```
+
+## VII. CSS Specificity
+
+CSS Specificity refers to the way in which browsers determine which CSS property values are to be applied to elements on a web page. It is a weight that is assigned to a given CSS rule, determined by the number of each selector type in the matching selector.
+
+The higher the specificity value, the more weight that rule has, and the more likely it is to be applied. In CSS, there are four selector types that contribute to specificity:
+
+- Inline styles
+- IDs
+- Classes, attributes, and pseudo-classes
+- Elements and pseudo-elements
+
+For example, consider the following CSS rules:
+
+```css
+p {
+  color: blue;
+}
+
+#myid {
+  color: red;
+}
+
+.myclass {
+  color: green;
+}
+```
+
+Here, the specificity of each rule can be calculated as follows:
+
+| Selector                   | Specificity Value | Calculation                           |
+| -------------------------- | ----------------- | ------------------------------------- |
+| p                          | 1                 | 1                                     |
+| p.test                     | 11                | 1 + 10                                |
+| p#demo                     | 101               | 1 + 100                               |
+| `<p style="color: pink;">` | 1000              | 1000                                  |
+| #demo                      | 100               | 100                                   |
+| .test                      | 10                | 10                                    |
+| p.test1.test2              | 21                | 1 + 10 + 10                           |
+| #navbar p#demo             | 201               | 100 + 1 + 100                         |
+| \*                         | 0                 | 0 (the universal selector is ignored) |
+
+## VIII. Inheritance and the Universal Selector
+
+Inheritance in CSS refers to the concept that certain CSS properties are passed down from parent elements to their child elements. This allows you to define styles at a higher level, which will then be inherited by all of the elements within that level.
+
+For example, if you set the font-size of a parent element to 20px, all of its child elements will also have a font-size of 20px unless otherwise specified.
+
+```css
+body {
+  font-size: 20px;
+}
+
+p {
+  background-color: yellow;
+}
+
+<body>
+  <p>This is a paragraph with a yellow background and 20px font size.</p>
+</body>
+```
+
+The Universal Selector in CSS, represented by an asterisk `*`, matches any element on a page. It can be used to apply styles to all elements, or to reset styles to a default value.
+
+For example:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: blue;
+}
+
+<body>
+  <p>This is a paragraph with blue text and no margin or padding.</p>
+</body>
+```
+
+In this example, the universal selector is used to set the margin and padding of all elements on the page to 0, and the `p` selector is used to set the text color of `p` elements to blue.
+
+## IX. CSS Box Model
 
 The CSS Box Model is a layout model used in web design that describes the rectangular boxes that are generated for elements in the document tree. Each box has content, padding, borders, and margins, and these boxes can be styled and positioned to create the desired layout.
 

@@ -2,14 +2,14 @@ import Link from "next/link";
 import { getFullDate } from "@/lib/date";
 import { ILesson } from "@/interfaces/lesson";
 
-const LessonCard = ({ title, excerpt, publishOn, slug, week }: ILesson) => {
+const LessonCard = ({ title, excerpt, publishOn, slug, day }: ILesson) => {
   return (
     <Link href={`/lessons/${slug}`} className="text-body-light">
-      <div className="flex items-start justify-between gap-6 mb-2">
+      <div className="mb-2 flex items-start justify-between gap-6">
         <h2 className="text-xl font-medium text-black">
-          Week {week}: {title}
+          Day {day}: {title}
         </h2>
-        <time className="px-2 text-sm leading-loose shrink-0">
+        <time className="shrink-0 px-2 text-sm leading-loose">
           {publishOn ? getFullDate(publishOn) : "Now"}
         </time>
       </div>

@@ -1,4 +1,4 @@
-import moment, { Moment } from "moment";
+import moment from "moment";
 
 export const getFullDate = (timestamp: number) => {
   return moment.unix(timestamp).format("MMMM DD, YYYY");

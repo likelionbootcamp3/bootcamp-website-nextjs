@@ -1,7 +1,6 @@
-import { getLesson, getLessons } from "@/services/lesson";
+import { getLesson, getLessonSlugs } from "@/services/lesson";
 import MDXRemoteWrapper from "@/components/mdx/MDXRemoteWrapper";
 import LessonDetailHeading from "@/components/lesson/LessonDetailHeading";
-import ProgressBar from "@/components/ProgressBar";
 import Container from "@/components/Container";
 
 export interface LessonParams {
@@ -9,10 +8,9 @@ export interface LessonParams {
 }
 
 export async function generateStaticParams() {
-  const lessons = await getLessons();
-
-  return lessons.map((lesson) => ({
-    lessonSlug: lesson.frontmatter?.slug,
+  const slugs = getLessonSlugs();
+  return slugs.map((slug) => ({
+    lessonSlug: slug,
   }));
 }
 
@@ -22,14 +20,14 @@ const LessonDetail = async ({ params }: LessonParams) => {
 
   return (
     <>
-      <article className="mx-auto prose max-w-none lg:prose-lg">
+      <article className="prose mx-auto max-w-none dark:prose-invert">
         {/* Heading */}
         <Container maxWidth="lg">
           <LessonDetailHeading {...lesson.frontmatter} />
         </Container>
         {/* Body */}
         <Container maxWidth="lg">
-          <MDXRemoteWrapper {...lesson} />
+          <MDXRemoteWrapper {...lesson.source} />
         </Container>
       </article>
     </>
