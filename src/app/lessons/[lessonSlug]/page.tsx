@@ -2,6 +2,7 @@ import { getLesson, getLessonSlugs } from "@/services/lesson";
 import MDXRemoteWrapper from "@/components/mdx/MDXRemoteWrapper";
 import LessonDetailHeading from "@/components/lesson/LessonDetailHeading";
 import Container from "@/components/Container";
+import TableOfContent from "@/components/lesson/TableOfContent";
 
 export interface LessonParams {
   params: { lessonSlug: string };
@@ -20,14 +21,25 @@ const LessonDetail = async ({ params }: LessonParams) => {
 
   return (
     <>
-      <article className="prose mx-auto max-w-none dark:prose-invert">
+      <article>
         {/* Heading */}
         <Container maxWidth="lg">
           <LessonDetailHeading {...lesson.frontmatter} />
         </Container>
         {/* Body */}
         <Container maxWidth="lg">
-          <MDXRemoteWrapper {...lesson.source} />
+          <div className="lg:flex lg:gap-16">
+            <div className="lg:grow">
+              <div className="prose mx-auto max-w-none">
+                <MDXRemoteWrapper {...lesson.source} />
+              </div>
+            </div>
+            <aside className="hidden min-w-[280px] lg:block">
+              <div className="sticky top-[calc(var(--navbar-scroll-height)+3rem)] h-full max-h-[calc(75vh)] overflow-scroll p-4">
+                <TableOfContent />
+              </div>
+            </aside>
+          </div>
         </Container>
       </article>
     </>

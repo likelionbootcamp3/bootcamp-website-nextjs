@@ -18,7 +18,25 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-gray-200;
+  }
+
   a {
     @apply block;
+  }
+
+  .prose a {
+    @apply inline;
+  }
+
+  .prose h2,
+  h3 {
+    scroll-margin-top: calc(var(--navbar-scroll-height) + 1.5em);
   }
 }

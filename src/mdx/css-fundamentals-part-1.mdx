@@ -12,7 +12,7 @@ publishOn: 1675677703
 
 ### 1. What is CSS?
 
-- CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
+- **CSS (Cascading Style Sheets)** is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
 
 ### 2. Purpose of CSS
 
@@ -27,13 +27,17 @@ publishOn: 1675677703
 
 CSS can be added to an HTML document in 3 ways:
 
-- `Inline`: CSS styles are added directly to an HTML element using the "style" attribute. This method is not recommended as it does not allow for easy maintenance or the separation of presentation and content.
+### 1. **Inline**
+
+CSS styles are added directly to an HTML element using the "style" attribute. This method is not recommended as it does not allow for easy maintenance or the separation of presentation and content.
 
 ```html
 <p style="color: blue;">This is a blue paragraph.</p>
 ```
 
-- `Internal`: CSS styles are added within the head section of an HTML document using a "style" tag. This method is useful for small websites, but it is not recommended for larger websites as the CSS becomes difficult to maintain.
+### 2. **Internal**
+
+CSS styles are added within the head section of an HTML document using a "style" tag. This method is useful for small websites, but it is not recommended for larger websites as the CSS becomes difficult to maintain.
 
 ```html
 <head>
@@ -48,15 +52,17 @@ CSS can be added to an HTML document in 3 ways:
 </body>
 ```
 
-- `External`: CSS styles are added in a separate file with a ".css" extension, and the file is linked to the HTML document using a "link" tag in the head section. This is the recommended method for larger websites as it allows for easy maintenance and
+### 3. **External**
+
+CSS styles are added in a separate file with a ".css" extension, and the file is linked to the HTML document using a "link" tag in the head section. This is the recommended method for larger websites as it allows for easy maintenance and
 
 ## III. CSS Syntax
 
-### 1. CSS Selectors:
+### 1. CSS Selectors
 
 CSS selectors allow you to select and style HTML elements on a web page
 
-- `Element selector`: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
+- **Element selector**: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
 
 ```css
 p {
@@ -65,7 +71,7 @@ p {
 }
 ```
 
-- `Class selector`: Selects elements based on their class attribute. Classes are defined by the developer and can be used multiple times on a page
+- **Class selector**: Selects elements based on their class attribute. Classes are defined by the developer and can be used multiple times on a page
 
 ```css
 .highlight {
@@ -74,7 +80,7 @@ p {
 }
 ```
 
-- `ID selector`: Selects elements based on their id attribute. IDs are unique and can only be used once on a page
+- **ID selector**: Selects elements based on their id attribute. IDs are unique and can only be used once on a page
 
 ```css
 #header {
@@ -84,7 +90,7 @@ p {
 }
 ```
 
-- `Attribute selector`: Selects elements based on their attribute values, such as "a" elements with a "href" attribute that starts with "https"
+- **Attribute selector**: Selects elements based on their attribute values, such as "a" elements with a "href" attribute that starts with "https"
 
 ```css
 a[href^="https"] {
@@ -92,7 +98,7 @@ a[href^="https"] {
 }
 ```
 
-- `Descendant selector`: Selects elements that are descendants of other elements
+- **Descendant selector**: Selects elements that are descendants of other elements
 
 ```css
 ul li {
@@ -100,7 +106,7 @@ ul li {
 }
 ```
 
-- `Child selector`: Selects elements that are direct children of other elements
+- **Child selector**: Selects elements that are direct children of other elements
 
 ```css
 ol > li {
@@ -112,28 +118,77 @@ ol > li {
 
 CSS properties assign a style or behavior to an HTML element.
 
-- `font-size`: specifies the size of the text. Example: `font-size: 16px`;
-- `color`: sets the text color. Example: `color: blue`;
-- `background-color`: sets the background color of an element. Example: `background-color: yellow`;
-- `text-align`: sets the horizontal alignment of text. Example: `text-align: center`;
-- `padding`: adds space within an element. Example: `padding: 10px`;
-- `margin`: adds space outside of an element. Example: `margin: 10px`;
-- `border`: adds a border around an element. Example: `border: 1px solid black`;
-- `display`: sets how an element should be displayed. Example: `display: block`;
-- `width`: sets the width of an element. Example: `width: 100px`;
-- `height`: sets the height of an element. Example: `height: 100px`;
+- **font-size**: specifies the size of the text.
+
+  Example: **font-size: 16px**;
+
+- **color**: sets the text color.
+
+  Example: **color: blue**;
+
+- **background-color**: sets the background color of an element.
+
+  Example: **background-color: yellow**;
+
+- **text-align**: sets the horizontal alignment of text.
+
+  Example: **text-align: center**;
+
+- **padding**: adds space within an element.
+
+  Example: **padding: 10px**;
+
+- **margin**: adds space outside of an element.
+
+  Example: **margin: 10px**;
+
+- **border**: adds a border around an element.
+
+  Example: **border: 1px solid black**;
+
+- **display**: sets how an element should be displayed.
+
+  Example: **display: block**;
+
+- **width**: sets the width of an element.
+
+  Example: **width: 100px**;
+
+- **height**: sets the height of an element.
+
+  Example: **height: 100px**;
 
 ### 3. CSS Values
 
 CSS values are the data assigned to CSS properties
 
-- `Length values`: Length values define the size of an element, such as height, width, padding, and margin. Length values can be expressed in pixels (px), em, rem, %, etc. Example: `width: 500px`;
-- `Color values`: Color values define the color of an element's text or background. Color values can be expressed as keywords (e.g. "red"), hexadecimal values (e.g. "#ff0000"), or RGB values (e.g. "rgb(255, 0, 0)"). Example: `color: #ff0000`;
-- `URL values`: URL values are used to specify the source of an image or a web page. URL values are expressed as a string starting with "url(...)" followed by the path to the resource. Example: `background-image: url(https://example.com/image.png)`;
-- `Percentage values`: Percentage values are used to specify sizes or positions as a percentage of the parent element. Example: `width: 50%`;
-- `Keyword values`: Keyword values are predefined values that determine how elements should be displayed or positioned. Example: `display: block`;
-- `Time values`: Time values are used to specify durations, such as the time it takes for an animation to complete. Time values are expressed in seconds (s) or milliseconds (ms). Example: `transition-duration: 500ms`;
-- `Angle values`: Angle values are used to specify rotations and are expressed in degrees (deg), radians (rad), or gradians (grad). Example: `transform:` rotate(45deg);
+- **Length values**: Length values define the size of an element, such as height, width, padding, and margin. Length values can be expressed in pixels (px), em, rem, %, etc.
+
+  Example: **width: 500px**;
+
+- **Color values**: Color values define the color of an element's text or background. Color values can be expressed as keywords (e.g. "red"), hexadecimal values (e.g. "#ff0000"), or RGB values (e.g. "rgb(255, 0, 0)").
+
+  Example: **color: #ff0000**;
+
+- **URL values**: URL values are used to specify the source of an image or a web page. URL values are expressed as a string starting with "url(...)" followed by the path to the resource.
+
+  Example: **background-image: url(https://example.com/image.png)**;
+
+- **Percentage values**: Percentage values are used to specify sizes or positions as a percentage of the parent element.
+
+  Example: **width: 50%**;
+
+- **Keyword values**: Keyword values are predefined values that determine how elements should be displayed or positioned.
+
+  Example: **display: block**;
+
+- **Time values**: Time values are used to specify durations, such as the time it takes for an animation to complete. Time values are expressed in seconds (s) or milliseconds (ms).
+
+  Example: **transition-duration: 500ms**;
+
+- **Angle values**: Angle values are used to specify rotations and are expressed in degrees (deg), radians (rad), or gradians (grad).
+
+  Example: **transform:** rotate(45deg);
 
 ## IV. CSS Text
 
