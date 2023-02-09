@@ -1,3 +1,4 @@
+import { ILesson } from "@/interfaces/lesson";
 import { MDX_ABSOLUTE_PATH } from "../constants/index";
 import { getMardownWithMeta } from "@/lib/mdx";
 import { serialize } from "next-mdx-remote/serialize";
@@ -9,7 +10,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeCodeTitles from "rehype-code-titles";
 
-export const getLessonSlugs = () => {
+export const getLessonSlugs = (): string[] => {
   return fs.readdirSync(MDX_ABSOLUTE_PATH).map((file) => {
     const slug = file.slice(0, -4);
     return slug;
@@ -47,7 +48,7 @@ export const getLesson = async (slug: string) => {
   return {
     source: mdxSource,
     frontmatter: {
-      ...mdxSource.frontmatter,
+      ...(mdxSource.frontmatter as ILesson),
       readingTime: readingTime(markdownWithMeta).text,
     },
   };
