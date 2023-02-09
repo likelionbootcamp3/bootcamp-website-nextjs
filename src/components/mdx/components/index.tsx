@@ -38,14 +38,14 @@ export const CopyToClipboard = ({ children }: ICopyToClipboard) => {
       ref={textInput}
       onMouseEnter={onEnter}
       onMouseLeave={onExit}
-      className="relative code-block"
+      className="code-block relative"
     >
       {hovered && (
         <button
           aria-label="Copy code"
           type="button"
           className={clsx(
-            "absolute right-2 top-2 h-8 w-8 rounded border-2 bg-gray-700 p-1 dark:bg-gray-800",
+            "absolute right-2 top-2 h-8 w-8 rounded border-2 bg-gray-700 p-1",
             {
               "border-green-400 focus:border-green-400 focus:outline-none":
                 copied,
