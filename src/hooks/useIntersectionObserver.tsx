@@ -9,7 +9,6 @@ const useIntersectionObserver = (
   }>({});
   useEffect(() => {
     const callback = (headings: IntersectionObserverEntry[]) => {
-      console.log(headings[0].target);
       headingElementsRef.current = headings.reduce((map, headingElement) => {
         map[headingElement.target.id] = headingElement;
         return map;

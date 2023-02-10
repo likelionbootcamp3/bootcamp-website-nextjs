@@ -12,7 +12,7 @@ publishOn: 1675677703
 
 ### 1. What is CSS?
 
-- **CSS (Cascading Style Sheets)** is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
+**CSS (Cascading Style Sheets)** is a style sheet language used for describing the look and formatting of a document written in HTML (Hypertext Markup Language). It allows web developers to separate the content of a web page from its presentation, making it easier to maintain and update the design of a website. CSS can be used to control the layout, font, color, and other visual elements of a web page, providing a consistent look and feel across all pages on a website.
 
 ### 2. Purpose of CSS
 
@@ -29,7 +29,7 @@ CSS can be added to an HTML document in 3 ways:
 
 ### 1. **Inline**
 
-CSS styles are added directly to an HTML element using the "style" attribute. This method is not recommended as it does not allow for easy maintenance or the separation of presentation and content.
+CSS styles are added directly to an HTML element using the **style** attribute. This method is not recommended as it does not allow for easy maintenance or the separation of presentation and content.
 
 ```html
 <p style="color: blue;">This is a blue paragraph.</p>
@@ -37,7 +37,7 @@ CSS styles are added directly to an HTML element using the "style" attribute. Th
 
 ### 2. **Internal**
 
-CSS styles are added within the head section of an HTML document using a "style" tag. This method is useful for small websites, but it is not recommended for larger websites as the CSS becomes difficult to maintain.
+CSS styles are added within the head section of an HTML document using a **style** tag. This method is useful for small websites, but it is not recommended for larger websites as the CSS becomes difficult to maintain.
 
 ```html
 <head>
@@ -54,7 +54,7 @@ CSS styles are added within the head section of an HTML document using a "style"
 
 ### 3. **External**
 
-CSS styles are added in a separate file with a ".css" extension, and the file is linked to the HTML document using a "link" tag in the head section. This is the recommended method for larger websites as it allows for easy maintenance and
+CSS styles are added in a separate file with a **.css** extension, and the file is linked to the HTML document using a **link** tag in the head section. This is the recommended method for larger websites as it allows for easy maintenance
 
 ## III. CSS Syntax
 
@@ -62,7 +62,7 @@ CSS styles are added in a separate file with a ".css" extension, and the file is
 
 CSS selectors allow you to select and style HTML elements on a web page
 
-- **Element selector**: Selects elements based on their type, such as "p" for paragraphs or "h1" for headings
+- **Element selector**: Selects elements based on their type, such as **p** for paragraphs or **h1** for headings
 
 ```css
 p {
@@ -120,43 +120,83 @@ CSS properties assign a style or behavior to an HTML element.
 
 - **font-size**: specifies the size of the text.
 
-  Example: **font-size: 16px**;
+```css
+p {
+  font-size: 16px;
+}
+```
 
 - **color**: sets the text color.
 
-  Example: **color: blue**;
+```css
+p {
+  color: blue;
+}
+```
 
 - **background-color**: sets the background color of an element.
 
-  Example: **background-color: yellow**;
+```css
+div {
+  background-color: yellow;
+}
+```
 
 - **text-align**: sets the horizontal alignment of text.
 
-  Example: **text-align: center**;
+```css
+p {
+  text-align: center;
+}
+```
 
 - **padding**: adds space within an element.
 
-  Example: **padding: 10px**;
+```css
+div {
+  padding: 10px;
+}
+```
 
 - **margin**: adds space outside of an element.
 
-  Example: **margin: 10px**;
+```css
+div {
+  margin: 10px;
+}
+```
 
 - **border**: adds a border around an element.
 
-  Example: **border: 1px solid black**;
+```css
+div {
+  border: 1px solid black;
+}
+```
 
 - **display**: sets how an element should be displayed.
 
-  Example: **display: block**;
+```css
+a {
+  display: block;
+}
+```
 
 - **width**: sets the width of an element.
 
-  Example: **width: 100px**;
+```css
+div {
+  width: 100px;
+}
+```
 
 - **height**: sets the height of an element.
 
-  Example: **height: 100px**;
+```css
+div {
+  height: 100px;
+}
+```
 
 ### 3. CSS Values
 
@@ -164,31 +204,59 @@ CSS values are the data assigned to CSS properties
 
 - **Length values**: Length values define the size of an element, such as height, width, padding, and margin. Length values can be expressed in pixels (px), em, rem, %, etc.
 
-  Example: **width: 500px**;
+```css
+div {
+  width: 500px;
+}
+```
 
 - **Color values**: Color values define the color of an element's text or background. Color values can be expressed as keywords (e.g. "red"), hexadecimal values (e.g. "#ff0000"), or RGB values (e.g. "rgb(255, 0, 0)").
 
-  Example: **color: #ff0000**;
+```css
+div {
+  color: #ff0000;
+}
+```
 
 - **URL values**: URL values are used to specify the source of an image or a web page. URL values are expressed as a string starting with "url(...)" followed by the path to the resource.
 
-  Example: **background-image: url(https://example.com/image.png)**;
+```css
+div {
+  background-image: url(https://example.com/image.png);
+}
+```
 
 - **Percentage values**: Percentage values are used to specify sizes or positions as a percentage of the parent element.
 
-  Example: **width: 50%**;
+```css
+div {
+  width: 50%;
+}
+```
 
 - **Keyword values**: Keyword values are predefined values that determine how elements should be displayed or positioned.
 
-  Example: **display: block**;
+```css
+div {
+  display: block;
+}
+```
 
 - **Time values**: Time values are used to specify durations, such as the time it takes for an animation to complete. Time values are expressed in seconds (s) or milliseconds (ms).
 
-  Example: **transition-duration: 500ms**;
+```css
+div {
+  transition-duration: 500ms;
+}
+```
 
 - **Angle values**: Angle values are used to specify rotations and are expressed in degrees (deg), radians (rad), or gradians (grad).
 
-  Example: **transform:** rotate(45deg);
+```css
+div {
+  transform: rotate(45deg);
+}
+```
 
 ## IV. CSS Text
 
@@ -202,11 +270,11 @@ p {
 }
 ```
 
-In the example above, `font-family` is set to `Arial` and the generic font-family `sans-serif` is specified as a fallback in case the specific font is not available on the user's device.
+In the example above, **font-family** is set to **Arial** and the generic font-family **sans-serif** is specified as a fallback in case the specific font is not available on the user's device.
 
 ### 2. Font size
 
-The font-size property in CSS is used to specify the size of the font for the text. The size can be specified in various units, including `px`, `rem`, `em`, and others.
+The font-size property in CSS is used to specify the size of the font for the text. The size can be specified in various units, including **px**, **rem**, **em**, and others.
 
 ```css
 p {
@@ -226,7 +294,7 @@ In this example, font-size is set to 1.5rem, meaning it will be 1.5 times the si
 
 ### 3. Font weight
 
-The `font-weight` property in CSS is used to specify the boldness or thickness of the font for the text. The font weight can be specified as a numerical value between 100 and 900, or as one of the predefined keywords `normal`, `bold`, `bolder`, or `lighter`.
+The `font-weight` property in CSS is used to specify the boldness or thickness of the font for the text. The font weight can be specified as a numerical value between 100 and 900, or as one of the predefined keywords **normal**, **bold**, **bolder**, or **lighter**.
 
 ```css
 p {
@@ -234,7 +302,7 @@ p {
 }
 ```
 
-In the example above, `font-weight` is set to `bold`, causing the text to be displayed in bold font weight.
+In the example above, **font-weight** is set to **bold**, causing the text to be displayed in bold font weight.
 
 ```css
 p {
@@ -242,11 +310,11 @@ p {
 }
 ```
 
-In this example, `font-weight` is set to `700`, causing the text to be displayed in a font weight of 700.
+In this example, **font-weight** is set to **700**, causing the text to be displayed in a font weight of 700.
 
 ### 4. Font style
 
-The `font-style` property in CSS is used to specify the style of the font for the text. The font style can be `normal`, `italic`, or `oblique`.
+The **font-style** property in CSS is used to specify the style of the font for the text. The font style can be **normal**, **italic**, or **oblique**.
 
 ```css
 p {
@@ -254,11 +322,11 @@ p {
 }
 ```
 
-In the example above, `font-style` is set to `italic`, causing the text to be displayed in italic style.
+In the example above, **font-style** is set to **italic**, causing the text to be displayed in italic style.
 
 ### 5. Text decoration
 
-The `text-decoration` property in CSS is used to specify the decoration applied to the text. Some of the most common values for `text-decoration` include `underline`, `overline`, `line-through`, and `none`.
+The **text-decoration** property in CSS is used to specify the decoration applied to the text. Some of the most common values for **text-decoration** include **underline**, **overline**, **line-through**, and **none**.
 
 ```css
 a {
@@ -266,11 +334,11 @@ a {
 }
 ```
 
-In the example above, `text-decoration` is set to `underline`, causing the text to be displayed with an underline.
+In the example above, **text-decoration** is set to **underline**, causing the text to be displayed with an underline.
 
 ### 6. Text transform
 
-The CSS "transform" property allows you to modify the appearance of an element by scaling, rotating, translating (moving), or skewing it.
+The CSS **transform** property allows you to modify the appearance of an element by scaling, rotating, translating (moving), or skewing it.
 
 - Scale:
 
@@ -344,7 +412,7 @@ This will add a red shadow 2 pixels to the right and 2 pixels down, a green shad
 
 ## V. CSS Color
 
-The CSS "color" property sets the color of text.
+The CSS **color** property sets the color of text.
 
 - Using color names:
 
@@ -354,7 +422,7 @@ p {
 }
 ```
 
-This will set the color of text inside `<p>` elements to red.
+This will set the color of text inside **p** elements to red.
 
 - Using hexadecimal values:
 
@@ -364,7 +432,7 @@ p {
 }
 ```
 
-This will set the color of text inside `<p>` elements to red.
+This will set the color of text inside **p** elements to red.
 
 - Using RGB values:
 
@@ -374,7 +442,7 @@ p {
 }
 ```
 
-This will set the color of text inside `<p>` elements to red.
+This will set the color of text inside **p** elements to red.
 
 - Using RGBA values:
 
@@ -384,13 +452,13 @@ p {
 }
 ```
 
-This will set the color of text inside `<p>` elements to semi-transparent red. The last value, `0.5`, is the alpha value that determines the opacity of the color.
+This will set the color of text inside **p** elements to semi-transparent red. The last value, **0.5**, is the alpha value that determines the opacity of the color.
 
 ## VI. Pseudo-classes
 
 Pseudo-classes in CSS allow you to select and style an element based on its state or relationship with other elements.
 
-- `:hover`: Selects an element when the user hovers over it with a mouse.
+- **:hover**: Selects an element when the user hovers over it with a mouse.
 
 ```css
 a:hover {
@@ -398,7 +466,7 @@ a:hover {
 }
 ```
 
-- `:active`: Selects an element when it is being actively clicked or pressed.
+- **:active**: Selects an element when it is being actively clicked or pressed.
 
 ```css
 button:active {
@@ -406,7 +474,7 @@ button:active {
 }
 ```
 
-- `:focus`: Selects an element when it has focus, such as when the user tabs to it or clicks on it.
+- **:focus**: Selects an element when it has focus, such as when the user tabs to it or clicks on it.
 
 ```css
 input:focus {
@@ -414,7 +482,7 @@ input:focus {
 }
 ```
 
-- `:first-child`: Selects an element that is the first child of its parent.
+- **:first-child**: Selects an element that is the first child of its parent.
 
 ```css
 li:first-child {
@@ -422,7 +490,7 @@ li:first-child {
 }
 ```
 
-- `:nth-child(n)`: Selects an element that is the nth child of its parent.
+- **:nth-child(n)**: Selects an element that is the nth child of its parent.
 
 ```css
 li:nth-child(2) {
@@ -430,7 +498,7 @@ li:nth-child(2) {
 }
 ```
 
-- `:not(selector)`: Selects elements that do not match the specified selector.
+- **:not(selector)**: Selects elements that do not match the specified selector.
 
 ```css
 :not(.highlight) {
@@ -440,7 +508,7 @@ li:nth-child(2) {
 
 ## VII. CSS Specificity
 
-CSS Specificity refers to the way in which browsers determine which CSS property values are to be applied to elements on a web page. It is a weight that is assigned to a given CSS rule, determined by the number of each selector type in the matching selector.
+**CSS Specificity** refers to the way in which browsers determine which CSS property values are to be applied to elements on a web page. It is a weight that is assigned to a given CSS rule, determined by the number of each selector type in the matching selector.
 
 The higher the specificity value, the more weight that rule has, and the more likely it is to be applied. In CSS, there are four selector types that contribute to specificity:
 
@@ -499,9 +567,7 @@ p {
 </body>
 ```
 
-The Universal Selector in CSS, represented by an asterisk `*`, matches any element on a page. It can be used to apply styles to all elements, or to reset styles to a default value.
-
-For example:
+The Universal Selector in CSS, represented by an asterisk **"\*"**, matches any element on a page. It can be used to apply styles to all elements, or to reset styles to a default value.
 
 ```css
 * {
@@ -518,7 +584,7 @@ p {
 </body>
 ```
 
-In this example, the universal selector is used to set the margin and padding of all elements on the page to 0, and the `p` selector is used to set the text color of `p` elements to blue.
+In this example, the universal selector is used to set the margin and padding of all elements on the page to 0, and the **p** selector is used to set the text color of **p** elements to blue.
 
 ## IX. CSS Box Model
 
@@ -526,11 +592,11 @@ The CSS Box Model is a layout model used in web design that describes the rectan
 
 The CSS Box Model consists of the following elements:
 
-- `Content`: The content area is where the actual content of an element is displayed.
-- `Padding`: The padding is the area surrounding the content, between the content and the border. It can be styled using the padding property. Example: `padding:` 20px;
-- `Border`: The border is the line surrounding the content and padding. It can be styled using the border property. Example: `border: 1px solid black`;
-- `Margin`: The margin is the area outside the border and defines the space between the current box and other elements. It can be styled using the margin property. Example: `margin: 20px`;
+- **Content**: The content area is where the actual content of an element is displayed.
+- **Padding**: The padding is the area surrounding the content, between the content and the border. It can be styled using the padding property.
+- **Border**: The border is the line surrounding the content and padding. It can be styled using the border property.
+- **Margin**: The margin is the area outside the border and defines the space between the current box and other elements. It can be styled using the margin property.
 
-**Note**: It is important to understand the CSS Box Model in order to properly style and position elements on a web page. The total width and height of a box can be calculated as the sum of its content width/height, plus twice the values of its padding, plus twice the values of its border.
+> It is important to understand the CSS Box Model in order to properly style and position elements on a web page. The total width and height of a box can be calculated as the sum of its content width/height, plus twice the values of its padding, plus twice the values of its border.
 
 ![Box Model](https://funix.edu.vn/wp-content/uploads/2022/02/boxmodel.png)

@@ -1,0 +1,549 @@
+---
+title: Javascript Fundamentals Part 1
+slug: javascript-fundamentals-part-1
+excerpt: JavaScript is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
+imageUrl: https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
+author: Huy Nguyen, Software Engineer
+day: 4
+publishOn: 1675950658
+---
+
+## I. Introduction to JavaScript
+
+### 1. What is JavaScript
+
+JavaScript is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
+
+### 2. JavaScript in Web Development
+
+JavaScript is an essential tool for modern web development. With JavaScript, developers can create interactive and dynamic user interfaces, validate user input, and perform complex calculations and operations on the client-side (i.e., within the user's web browser). JavaScript can also be used to create real-time applications such as chat applications and online multiplayer games. Additionally, JavaScript can be used in conjunction with other web technologies such as HTML, CSS, and web APIs to create robust and responsive web applications.
+
+### 3. JavaScript vs. Other Programming Languages
+
+JavaScript is often compared to other popular programming languages such as **Java** and **Python**. However, JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. In contrast, Java is a statically typed language, where variables must be declared with a specific data type. Python is a dynamically typed language as well, but it is more commonly used for scientific computing, machine learning, and artificial intelligence applications.
+
+## Linking to JavaScript
+
+There are two ways to link a JavaScript file to an HTML document:
+
+### 1. Inline JavaScript
+
+JavaScript code can also be included directly in the HTML
+document using the **script** tag without a **src** attribute.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!-- Your HTML content here -->
+    <script>
+      // Your JavaScript code here
+    </script>
+  </body>
+</html>
+```
+
+It's important to note that the external JavaScript file should be placed in the same directory as the HTML document or should have the complete URL specified in the **src** attribute.
+
+### 2. External JavaScript file
+
+A standalone .js file that is linked to the HTML document using the **src** attribute in a **script** tag. This is the most common method of linking a JavaScript file.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!-- Your HTML content here -->
+    <script src="yourjavascriptfile.js"></script>
+  </body>
+</html>
+```
+
+## Variables
+
+### 1. Data Types
+
+In JavaScript, there are 7 data types:
+
+- **Number**: Used for numbers, including decimals and integers
+
+```js
+var x = 10;
+```
+
+- **String**: Used for textual data
+
+```js
+var name = "John Doe";
+```
+
+- **Boolean**: Used for true/false values
+
+```js
+var isStudent = true;
+```
+
+- **Undefined**: A variable with no value assigned to it has the undefined type
+
+```js
+var age;
+```
+
+- **Null**: Represents intentional non-existence of any object value
+
+```js
+var person = null;
+```
+
+- **Object**: Used to store collections of data
+
+goCopy code
+
+`var car = {make: "Toyota", model: "Camry"};`
+
+- **Symbol**: A unique identifier
+
+```js
+var id = Symbol("id");
+```
+
+### 2. Variable Declaration
+
+A variable in JavaScript is declared using the `var`, `let`, or `const` keyword.
+
+- `var`: The `var` keyword is used to declare a variable with function scope, meaning that a variable declared with `var` is accessible within the function where it is declared
+
+```js
+var x = 10;
+```
+
+- `let`: The `let` keyword is used to declare a variable with block scope, meaning that a variable declared with `let` is only accessible within the block where it is declared
+
+```js
+let y = 20;
+```
+
+- `const`: The `const` keyword is used to declare a constant with block scope. Its value cannot be changed once it is assigned
+
+```js
+const z = 30;
+```
+
+### 3. Variable Naming Conventions
+
+In JavaScript, variable names can contain letters, digits, underscores, and dollar signs, but they cannot start with a digit. Some conventions for naming variables are:
+
+- **Camel case**: The first letter of each word is in lowercase, and subsequent words have their first letter capitalized
+
+```js
+var firstName = "John";
+```
+
+- **Pascal case**: The first letter of each word, including the first word, is capitalized
+
+```js
+var FirstName = "John";
+```
+
+- **Snake case**: Words are separated by underscores and all letters are in lowercase
+
+```js
+var first_name = "John";
+```
+
+- **Constant naming convention**: Constant names are usually written in uppercase letters, with words separated by underscores
+
+```js
+const PI = 3.14;
+```
+
+## Operators
+
+### 1. Arithmetic Operators
+
+- Addition (`+`)
+
+```js
+console.log(2 + 3); // Output: 5
+```
+
+- Subtraction (`-`)
+
+```js
+console.log(10 - 5); // Output: 5
+```
+
+- Multiplication (`\*`)
+
+```js
+console.log(3 * 4); // Output: 12
+```
+
+- Division (`/`)
+
+```js
+console.log(10 / 5); // Output: 2
+```
+
+- Modulus (`%`)
+
+```js
+console.log(10 % 3); // Output: 1
+```
+
+- Exponentiation (`**`)
+
+```js
+console.log(2 ** 3); // Output: 8
+```
+
+- Increment (`++`)
+
+```js
+let x = 5;
+console.log(x++); // Output: 5
+console.log(x); // Output: 6
+```
+
+- Decrement (`--`)
+
+```js
+let x = 5;
+console.log(x--); // Output: 5
+console.log(x); // Output: 4`
+```
+
+### 2. Comparison Operators
+
+- Equal (`==`)
+
+```js
+console.log(10 == 10); // Output: true
+```
+
+- Not equal (`!=`)
+
+```js
+console.log(10 != 5); // Output: true;
+```
+
+- Strict equality (`===`)
+
+```js
+console.log(10 === "10"); // Output: false
+```
+
+- Strict non-equality (`!==`)
+
+```js
+console.log(10 !== "10"); // Output: true
+```
+
+- Greater than (`>`)
+
+```js
+console.log(10 > 5); // Output: true
+```
+
+- Less than (`<`)
+
+```js
+console.log(5 < 10); // Output: true
+```
+
+- Greater than or equal (`>=`)
+
+```js
+console.log(10 >= 10); // Output: true
+```
+
+- Less than or equal (`<=`)
+
+```js
+console.log(5 <= 10); // Output: true
+```
+
+### 3. Logical Operators
+
+- And (`&&`)
+
+```js
+console.log(true && false); // Output: false
+```
+
+- Or (`||`)
+
+```js
+console.log(true || false); // Output: true
+```
+
+- Not (`!`)
+
+```js
+console.log(!true); // Output: false
+```
+
+## Conditional Statements
+
+### 1. if-else Statements
+
+The **if-else** statement is used to conditionally execute a block of code based on whether a boolean condition is true or false.
+
+```js
+let age = 20;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are not an adult.");
+}
+```
+
+In this example, the `if` statement checks whether the value of the `age` variable is greater than or equal to 18. If the condition is true, the code inside the first block `console.log("You are an adult.")` will be executed. If the condition is false, the code inside the `else` block `console.log("You are not an adult.")` will be executed.
+
+Here's another example:
+
+```js
+let score = 75;
+
+if (score >= 90) {
+  console.log("A");
+} else if (score >= 80) {
+  console.log("B");
+} else if (score >= 70) {
+  console.log("C");
+} else {
+  console.log("F");
+}
+```
+
+In this example, the code uses multiple `if-else` statements to determine a letter grade based on a numerical score. If the score is 90 or greater, the code will output "A". If the score is between 80 and 89, the code will output "B", and so on. If none of the conditions are met, the code inside the final `else` block `console.log("F")` will be executed.
+
+### 2. switch Statements
+
+The **switch** statement is used to conditionally execute a block of code based on multiple possible matches of an expression to a case label. Here's an example:
+
+```js
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Today is Monday");
+    break;
+  case "Tuesday":
+    console.log("Today is Tuesday");
+    break;
+  case "Wednesday":
+    console.log("Today is Wednesday");
+    break;
+  default:
+    console.log("Today is some other day");
+}
+```
+
+In the above example, the value of the expression `day` is compared against the different `case` labels. If a match is found, the code inside that case block is executed. The `break` statement is used to exit the switch statement and prevent the code from falling through to the next case block. If no case is matched, the code inside the `default` block will be executed.
+
+### 3. The conditional (ternary) operator
+
+The conditional (ternary) operator in JavaScript is a shorthand way of writing an if...else statement. It's a shorthand way of evaluating a condition and returning a value based on whether the condition is **true** or **false**.
+
+The syntax for the ternary operator is as follows:
+
+```js
+condition ? value_if_true : value_if_false;
+```
+
+The condition is evaluated, and if it's **true**, the expression returns **value_if_true**. If condition is **false**, the expression returns **value_if_false**.
+
+Here's an example of using a ternary operator to determine what message to display based on a person's age:
+
+```js
+let age = 18;
+let message = age >= 18 ? "You are an adult" : "You are a minor";
+console.log(message);
+```
+
+In this example, the condition **(age >= 18)** is evaluated to see if **age** is greater than or equal to 18. If it is, the expression returns "You are an adult". If it isn't, the expression returns "You are a minor".
+
+## Type Conversion and Coercion
+
+### 1. Type conversion
+
+Type coversion refers to the process of converting a value from one data type to another. JavaScript is a loosely typed language, meaning that you do not have to explicitly specify the data type of a variable. The language will automatically attempt to convert values to the appropriate data type as needed.
+
+Here are some examples of type conversion in JavaScript:
+
+```js
+// Using the Number() function to convert a string to a number
+let stringValue = "42";
+let numericValue = Number(stringValue);
+console.log(numericValue); // Output: 42
+
+// Using the String() function to convert a number to a string
+let numberValue = 42;
+let stringValue = String(numberValue);
+console.log(stringValue); // Output: "42"
+
+// Using the Boolean() function to convert a value to a boolean
+let stringValue = "false";
+let booleanValue = Boolean(stringValue);
+console.log(booleanValue); // Output: true
+```
+
+### 2. Type coercion
+
+Type coercion, on the other hand, is the implicit conversion of values from one data type to another. In JavaScript, type coercion can occur when you perform certain operations, such as comparison or arithmetic, with values of different data types.
+And here are some examples of type coercion in JavaScript:
+
+```js
+// Coercion during comparison
+let x = "42";
+let y = 42;
+console.log(x == y); // Output: true
+
+// Coercion during arithmetic
+let x = "42";
+let y = 2;
+console.log(x \* y); // Output: 84
+```
+
+It's important to understand type conversion and coercion in JavaScript to prevent unexpected results in your code. In many cases, it may be better to explicitly convert values to the desired data type, rather than relying on implicit coercion.
+
+## Falsy and Truthy Values
+
+In programming, the concept of truthiness and falsiness refers to values that are considered as equivalent to true or false in a boolean context. In other words, some values are treated as true, while others are treated as false.
+
+Here are the falsy values in JavaScript:
+
+- false
+- 0 (zero)
+- "" (empty string)
+- null
+- undefined
+- NaN (not a number)
+
+All other values, including all objects and arrays, are truthy.
+
+Here are a few examples:
+
+```js
+if (true) {
+  console.log("This is a truthy value");
+}
+
+if (42) {
+  console.log("This is also a truthy value");
+}
+
+if (false) {
+  console.log("This won't get printed");
+} else {
+  console.log("This is a falsy value");
+}
+
+if ("") {
+  console.log("This won't get printed either");
+} else {
+  console.log("An empty string is a falsy value");
+}
+```
+
+> It's important to note that the concept of truthiness and falsiness applies to many programming languages, but the specific values that are considered truthy or falsy may vary.
+
+## Equality Operators (== vs ===)
+
+The equality operators == and === are used in JavaScript to compare values and determine if they are equal.
+
+### 1. ==
+
+**==** is the equality operator, also known as the "loose equality" operator. This operator performs type coercion, meaning that it will try to convert the operands to the same type before making the comparison. For example, if you compare a string and a number with **==**, the string will be converted to a number before the comparison is made:
+
+```js
+"5" == 5; // true
+```
+
+### 2. ===
+
+**===**, on the other hand, is the strict equality operator. It performs no type coercion and returns true only if the operands have the same type and value:
+
+```js
+"5" === 5; // false
+```
+
+It is generally recommended to use the **===** operator for equality comparisons in JavaScript, as it can help prevent unexpected behavior due to type coercion.
+
+## Boolean Logic
+
+**Boolean logic** is a fundamental concept in computer programming, and JavaScript is no exception. A boolean value is either **true** or **false**, and it is used to represent binary logic. In JavaScript, you can use boolean values in control structures, such as if statements and while loops, to make decisions in your code.
+
+### 1. Equality (==)
+
+The equality operator (==) compares two values to determine if they are equal. If the values are equal, the expression returns true, otherwise, it returns false.
+
+```js
+let x = 5;
+let y = 5;
+console.log(x == y); // true
+```
+
+### 2.Inequality (!=)
+
+The inequality operator (!=) compares two values to determine if they are not equal. If the values are not equal, the expression returns true, otherwise, it returns false.
+
+```js
+let x = 5;
+let y = 7;
+console.log(x != y); // true
+```
+
+### 3.Strict equality (===)
+
+The strict equality operator (===) compares two values for equality, and it also checks if the values are of the same type. If the values are equal and of the same type, the expression returns true, otherwise, it returns false.
+
+```js
+let x = 5;
+let y = "5";
+console.log(x === y); // false
+```
+
+### 4. Strict inequality (!==)
+
+The strict inequality operator (!==) compares two values for inequality, and it also checks if the values are of the same type. If the values are not equal or not of the same type, the expression returns true, otherwise, it returns false.
+
+```js
+let x = 5;
+let y = "5";
+console.log(x !== y); // true
+```
+
+### 5. Logical AND (&&)
+
+The logical AND operator (&&) returns true if both the operands are true, otherwise, it returns false.
+
+```js
+let x = true;
+let y = false;
+console.log(x && y); // false
+```
+
+### 6. Logical OR (||)
+
+The logical OR operator (||) returns true if either of the operands is true, otherwise, it returns false.
+
+```js
+let x = true;
+let y = false;
+console.log(x || y); // true
+```
+
+### 7. Logical NOT (!)
+
+The logical NOT operator (!) negates the boolean value. If the operand is true, the expression returns false, and if the operand is false, the expression returns true.
+
+```js
+let x = true;
+console.log(!x); // false
+```
+
+These are some of the basic boolean operations in JavaScript. You can use these operations to write complex expressions and make decisions in your code.

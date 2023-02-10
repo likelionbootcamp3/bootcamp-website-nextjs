@@ -28,13 +28,13 @@ const LessonDetail = async ({ params }: LessonParams) => {
         </Container>
         {/* Body */}
         <Container maxWidth="lg">
-          <div className="lg:flex lg:gap-16">
-            <div className="lg:grow">
+          <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-16">
+            <div className="overflow-auto">
               <div className="prose mx-auto max-w-none">
                 <MDXRemoteWrapper {...lesson.source} />
               </div>
             </div>
-            <aside className="hidden min-w-[280px] lg:block">
+            <aside className="hidden lg:block">
               <div className="sticky top-[calc(var(--navbar-scroll-height)+3rem)] h-full max-h-[calc(75vh)] overflow-scroll p-4">
                 <TableOfContent />
               </div>
