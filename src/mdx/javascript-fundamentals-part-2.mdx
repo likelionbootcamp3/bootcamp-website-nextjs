@@ -12,7 +12,7 @@ publishOn: 1675950659
 
 **Strict Mode** is a feature in JavaScript that provides a restricted variant of JavaScript. When you use strict mode, it enables more warnings and disables certain behaviors that are prone to error or dangerous.
 
-Using strict mode makes it easier to write "secure" JavaScript. Strict mode makes several changes to normal JavaScript semantics:
+Using strict mode makes it easier to write **secure** JavaScript. Strict mode makes several changes to normal JavaScript semantics:
 
 - Eliminates some JavaScript silent errors by changing them to throw errors.
 - Prohibits the use of certain syntax that is potentially problematic and is not part of the ECMAScript specification.
@@ -20,7 +20,7 @@ Using strict mode makes it easier to write "secure" JavaScript. Strict mode make
 
 Strict mode can be invoked in two ways:
 
-- On a per-function basis: You can apply strict mode to a specific function by adding the "use strict" directive at the beginning of the function body.
+- **On a per-function basis**: You can apply strict mode to a specific function by adding the "use strict" directive at the beginning of the function body.
 
 ```js
 function strictFunction() {
@@ -29,7 +29,7 @@ function strictFunction() {
 }
 ```
 
-- On a per-file basis: You can apply strict mode to an entire script file by adding the "use strict" directive at the top of the file.
+- **On a per-file basis**: You can apply strict mode to an entire script file by adding the **"use strict"** directive at the top of the file.
 
 ```js
 "use strict";
@@ -42,17 +42,9 @@ function strictFunction() {
 
 ### 1. Function Declarations
 
-Function Declarations are functions that are declared with the "function" keyword, followed by the function name, a list of parameters enclosed in parentheses, and the function body. The function body contains the statements that define what the function does. Function Declarations are hoisted, meaning they are moved to the top of their scope and can be called before they are defined in the code.
+**Function Declarations** are functions that are declared with the **function** keyword, followed by the **function name**, a list of **parameters** enclosed in parentheses, and the **function body**. The function body contains the statements that define what the function does. Function Declarations are **hoisted**, meaning they are moved to the top of their scope and can be called before they are defined in the code.
 
 ```js
-function sum(a, b) {
-  return a + b;
-}
-
-let result = sum(5, 10);
-console.log(result);
-// Output: 15
-
 function greet(name) {
   console.log("Hello, " + name + "!");
 }
@@ -63,17 +55,9 @@ greet("John");
 
 ### 2. Function Expressions
 
-Function Expressions are similar to Function Declarations, but instead of using the "function" keyword, they are assigned to variables. Function Expressions are not hoisted and must be declared before they are called.
+**Function Expressions** are similar to Function Declarations, but instead of using the **function** keyword, they are assigned to variables. Function Expressions are not hoisted and must be declared before they are called.
 
 ```js
-let multiply = function (a, b) {
-  return a * b;
-};
-
-let result = multiply(5, 10);
-console.log(result);
-// Output: 50
-
 let greet = function (name) {
   console.log("Hello, " + name + "!");
 };
@@ -84,17 +68,9 @@ greet("Jane");
 
 ### 3. Arrow Functions
 
-Arrow Functions are a shorthand syntax for writing function expressions. They are declared with the **=>** operator and have a compact syntax that makes them useful for anonymous functions and small function expressions. Arrow functions do not have their own `this` value and automatically inherit the `this` value of the parent scope.
+**Arrow Functions** are a shorthand syntax for writing function expressions. They are declared with the **(=>)** operator and have a compact syntax that makes them useful for anonymous functions and small function expressions. Arrow functions do not have their own **this** value and automatically inherit the **this** value of the parent scope.
 
 ```js
-let square = (x) => {
-  return x * x;
-};
-
-let result = square(5);
-console.log(result);
-// Output: 25
-
 let greet = (name) => {
   console.log("Hello, " + name + "!");
 };
@@ -103,13 +79,13 @@ greet("John");
 // Output: Hello, John!
 ```
 
-It's important to note that Arrow Functions should be used with caution in cases where the function body is complex, as they have a more limited syntax compared to traditional Function Declarations and Expressions.
+> It's important to note that Arrow Functions should be used with caution in cases where the function body is complex, as they have a more limited syntax compared to traditional Function Declarations and Expressions.
 
 ## Arrays
 
 ### 1. Creating Arrays
 
-You can create an array by using square brackets `[]` and separating elements with commas. For example:
+You can create an array by using square brackets **[]** and separating elements with commas.
 
 ```js
 var fruits = ["apple", "banana", "cherry"];
@@ -123,7 +99,7 @@ var fruits = new Array("apple", "banana", "cherry");
 
 ### 2. Accessing Array Elements
 
-You can access an array element by using its index number. Array indexes start at 0. For example:
+You can access an array element by using its **index** number. Array indexes start at **0**.
 
 ```js
 var fruits = ["apple", "banana", "cherry"];
@@ -133,7 +109,7 @@ console.log(fruits[0]); // Output: apple
 
 ### 3. Modifying Array Elements
 
-You can modify an array element by referring to its index number and assigning a new value to it. For example:
+You can modify an array element by referring to its **index** number and assigning a new value to it.
 
 ```js
 `var fruits = ["apple", "banana", "cherry"];
@@ -146,21 +122,21 @@ console.log(fruits[0]); // Output: kiwi;
 
 JavaScript arrays have a number of built-in methods that allow you to manipulate the elements in an array. Some of the most commonly used methods are:
 
-- `push()`: Adds an element to the end of an array.
-- `pop()`: Removes the last element of an array.
-- `shift()`: Removes the first element of an array.
-- `unshift()`: Adds an element to the beginning of an array.
-- `splice()`: Adds or removes elements from an array.
-- `slice()`: Returns a new array that contains a portion of the original array.
-- `concat()`: Joins two arrays and returns a new array.
-- `join()`: Converts an array to a string and returns the result.
-- `sort()`: Sorts the elements in an array.
-- `reverse()`: Reverses the order of the elements in an array.
+- **push()**: Adds an element to the end of an array.
+- **pop()**: Removes the last element of an array.
+- **shift()**: Removes the first element of an array.
+- **unshift()**: Adds an element to the beginning of an array.
+- **splice()**: Adds or removes elements from an array.
+- **slice()**: Returns a new array that contains a portion of the original array.
+- **concat()**: Joins two arrays and returns a new array.
+- **join()**: Converts an array to a string and returns the result.
+- **sort()**: Sorts the elements in an array.
+- **reverse()**: Reverses the order of the elements in an array.
 
 Here's an example that demonstrates some of these methods:
 
 ```js
-var fruits = ["apple", "banana", "cherry"];
+const fruits = ["apple", "banana", "cherry"];
 
 fruits.push("kiwi");
 console.log(fruits); // Output: [ "apple", "banana", "cherry", "kiwi" ]
@@ -174,13 +150,13 @@ console.log(fruits); // Output: [ "strawberry", "apple", "banana", "cherry" ]
 fruits.splice(1, 0, "orange");
 console.log(fruits); // Output: [ "strawberry", "orange", "apple", "banana", "cherry" ]
 
-var newFruits = fruits.slice(1, 3);
+const newFruits = fruits.slice(1, 3);
 console.log(newFruits); // Output: [ "orange", "apple" ]
 
-var combinedFruits = newFruits.concat(["mango"]);
+const combinedFruits = newFruits.concat(["mango"]);
 console.log(combinedFruits); // Output: [ "orange", "apple", "mango" ]
 
-var fruitString = fruits.join(", ");
+const fruitString = fruits.join(", ");
 console.log(fruitString);
 ```
 
@@ -196,9 +172,9 @@ for (initialization; condition; increment / decrement) {
 }
 ```
 
-Here, `initialization` is where you initialize the loop counter; `condition` is the expression that is evaluated before each iteration of the loop; and `increment/decrement` is the statement that updates the loop counter after each iteration.
+Here, **initialization** is where you initialize the loop counter; **condition** is the expression that is evaluated before each iteration of the loop; and **increment/decrement** is the statement that updates the loop counter after each iteration.
 
-Here are some examples of using a `for` loop in JavaScript:
+Here are some examples of using a **for** loop in JavaScript:
 
 - Printing numbers from 1 to 10:
 
@@ -259,19 +235,16 @@ while (i <= 5) {
   console.log(i);
   i++;
 }
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
 ```
 
-Output:
-
-```bash
-1
-2
-3
-4
-5
-```
-
-It's important to note that the condition must eventually become false, otherwise the loop will run indefinitely, leading to an infinite loop.
+> It's important to note that the condition must eventually become false, otherwise the loop will run indefinitely, leading to an infinite loop.
 
 Here's an example of an infinite loop:
 
@@ -281,13 +254,13 @@ while (true) {
 }
 ```
 
-It's always a good practice to include a counter or some other mechanism to ensure that the condition eventually becomes false, to prevent infinite loops.
+> It's always a good practice to include a counter or some other mechanism to ensure that the condition eventually becomes false, to prevent infinite loops.
 
 ## Object
 
 ### 1. Object Literals
 
-An object literal is a simple way of creating objects by defining properties and values directly within curly braces {}.
+An **object literal** is a simple way of creating objects by defining properties and values directly within curly braces **(\{\})**.
 
 ```js
 var person = {
@@ -302,7 +275,7 @@ var person = {
 
 ### 2. Object Constructors
 
-An object constructor is a blueprint for creating objects, allowing you to create multiple objects with the same properties and methods.
+An **object constructor** is a blueprint for creating objects, allowing you to create multiple objects with the same properties and methods.
 
 ```js
 function Person(firstName, lastName, age) {
@@ -320,7 +293,7 @@ var person2 = new Person("Jane", "Doe", 28);
 
 ### 3. Prototypes
 
-Prototypes allow you to add properties and methods to an object that can be inherited by all instances of that object.
+**Prototypes** allow you to add properties and methods to an object that can be inherited by all instances of that object.
 
 ```js
 function Person(firstName, lastName, age) {
@@ -339,7 +312,7 @@ var person2 = new Person("Jane", "Doe", 28);
 
 ### 4. Inheritance
 
-Inheritance allows you to create a new object based on an existing object, inheriting its properties and methods.
+**Inheritance** allows you to create a new object based on an existing object, inheriting its properties and methods.
 
 ```js
 function Person(firstName, lastName, age) {
@@ -367,7 +340,7 @@ var student = new Student("John", "Doe", 30, "University of ABC");
 
 ### 1. Arrow Functions
 
-Arrow functions are a shorthand syntax for writing anonymous functions. They provide a more concise way of writing functions and automatically bind the `this` keyword to the context in which the function was defined. Here's an example:
+**Arrow functions** are a shorthand syntax for writing anonymous functions. They provide a more concise way of writing functions and automatically bind the **this** keyword to the context in which the function was defined.
 
 ```js
 
@@ -382,7 +355,7 @@ const multiply = (x, y) => x \* y;
 
 ### 2. let and const
 
-`let` and `const` are new ways of declaring variables in JavaScript. The key difference between `let` and `var` is that `let` has block-level scope, while `var` has function-level scope. `const` works similarly to `let`, but the value of a `const` variable cannot be reassigned after it's been declared. Here's an example:
+**let** and **const** are new ways of declaring variables in JavaScript. The key difference between **let** and **var** is that **let** has block-level scope, while **var** has function-level scope. **const** works similarly to **let**, but the value of a **const** variable cannot be reassigned after it's been declared.
 
 ```js
 // Declare a variable with var
@@ -408,7 +381,7 @@ PI = 3.15; // TypeError: Assignment to constant variable.
 
 ### 3. Template Literals
 
-Template literals are a way of embedding expressions within string literals, using backticks (\`). They provide a more readable way of concatenating strings, especially when dealing with multi-line strings. Here's an example:
+**Template literals** are a way of embedding expressions within string literals, using backticks **(\`)**. They provide a more readable way of concatenating strings, especially when dealing with multi-line strings.
 
 ```js
 // Concatenating strings with plus operator
@@ -422,7 +395,7 @@ const message = `Hello, ${name}!`;
 
 ### 4. Destructuring
 
-Destructuring is a convenient way of extracting values from arrays and objects into variables. This is especially useful when working with data structures that contain large amounts of data, and you only need to extract a small portion of it. Here's an example:
+**Destructuring** is a convenient way of extracting values from **arrays** and **objects** into variables. This is especially useful when working with data structures that contain large amounts of data, and you only need to extract a small portion of it.
 
 ```js
 // Extracting values from an array
@@ -438,7 +411,7 @@ console.log(name, age); // John 30
 
 ### 5. Modules
 
-Modules provide a way of organizing and sharing code between different files and modules. In ES6, the syntax for importing and exporting modules has been standardized, making it easier to split up code into smaller, more manageable chunks. Here's an example:
+**Modules** provide a way of organizing and sharing code between different files and modules. In ES6, the syntax for importing and exporting modules has been standardized, making it easier to split up code into smaller, more manageable chunks.
 
 ```js
 // Exporting a module
@@ -447,12 +420,12 @@ export const age = 30;
 
 // Importing a module
 import { name, age } from "./person.js";
-console.log(name, age); // John
+console.log(name, age); // John 30
 ```
 
 ### 6. Classes
 
-Classes provide a way of creating objects using a blueprint-style syntax, similar to object-oriented programming languages. This makes it easier to create complex objects with similar structures and behavior, and makes the code more organized and easier to understand. Here's an example:
+**Classes** provide a way of creating objects using a blueprint-style syntax, similar to object-oriented programming languages. This makes it easier to create complex objects with similar structures and behavior, and makes the code more organized and easier to understand.
 
 ```js
 // Defining a class
@@ -476,7 +449,7 @@ person.sayHello(); // Hello, my name is John and I'm 30 years old.
 
 ### 7. Spread and Rest Operators
 
-The spread and rest operators are used to spread the elements of an array into separate variables, or merge several arrays into one. The spread operator is denoted by three dots (`...`), and the rest operator is denoted by the same, but within function parameters. Here's an example:
+The **spread and rest operators** are used to spread the elements of an array into separate variables, or merge several arrays into one. The spread operator is denoted by three dots **(...)**, and the rest operator is denoted by the same, but within function parameters.
 
 ```js
 // Spreading elements of an array into separate variables
@@ -499,7 +472,7 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 
 ### 8. Default Parameters
 
-Default parameters allow you to specify default values for function parameters, in case they're not provided when the function is called. This makes it easier to write functions that can handle missing or undefined arguments. Here's an example:
+**Default parameters** allow you to specify default values for function parameters, in case they're not provided when the function is called. This makes it easier to write functions that can handle missing or undefined arguments.
 
 ```js
 // Function with default parameters
@@ -512,7 +485,7 @@ greet("Jane"); // Hello, Jane!
 
 ### 9. Promises
 
-Promises provide a way of handling asynchronous code and handling errors in a more elegant way. A promise represents a value that may not be available yet, but will be at some point in the future. Promises can be used to handle complex async flows, such as fetching data from an API, in a more manageable way. Here's an example:
+**Promises** provide a way of handling asynchronous code and handling errors in a more elegant way. A promise represents a value that may not be available yet, but will be at some point in the future. Promises can be used to handle complex async flows, such as fetching data from an API, in a more manageable way.
 
 ```js
 // Creating a promise
@@ -553,7 +526,7 @@ console.log(sequence.next().value); // 5
 
 ### 11. Map, Set, and WeakMap/WeakSet:
 
-- Map: A Map is a collection of key-value pairs, where each key can be any value (including objects) and each value can be any data type. Maps offer better performance compared to traditional objects and are useful when you need to store data using non-string keys.
+- **Map**: is a collection of key-value pairs, where each key can be any value (including objects) and each value can be any data type. Maps offer better performance compared to traditional objects and are useful when you need to store data using non-string keys.
 
 ```js
 const map = new Map();
@@ -565,7 +538,7 @@ console.log(map.get("age")); // 30
 console.log(map.size); // 2
 ```
 
-- Set: A Set is a collection of unique values, where each value can be of any data type. Sets offer better performance compared to traditional arrays and are useful when you need to store a collection of unique values.
+- **Set**: is a collection of unique values, where each value can be of any data type. Sets offer better performance compared to traditional arrays and are useful when you need to store a collection of unique values.
 
 ```js
 const set = new Set();
@@ -579,7 +552,7 @@ console.log(set.has(4)); // false
 console.log(set.size); // 3
 ```
 
-- WeakMap: A WeakMap is a collection of key-value pairs, where the keys are weakly referenced. This means that if there are no other references to the key, the key-value pair will be automatically removed from the WeakMap. WeakMaps are useful when you need to store data that may not always be needed.
+- **WeakMap**: is a collection of key-value pairs, where the keys are weakly referenced. This means that if there are no other references to the key, the key-value pair will be automatically removed from the WeakMap. WeakMaps are useful when you need to store data that may not always be needed.
 
 ```js
 const weakMap = new WeakMap();
@@ -590,7 +563,7 @@ key = null; // the key is no longer referenced
 console.log(weakMap.get(key)); // undefined
 ```
 
-- WeakSet: A WeakSet is a collection of weakly referenced values. This means that if there are no other references to the value, the value will be automatically removed from the WeakSet
+- **WeakSet**: is a collection of weakly referenced values. This means that if there are no other references to the value, the value will be automatically removed from the WeakSet
 
 ```js
 const weakSet = new WeakSet();
@@ -607,7 +580,7 @@ console.log(weakSet.has(value1)); // false
 
 ### 12. Symbol:
 
-A Symbol is a new data type in JavaScript that can be used to create unique object properties. Symbols are guaranteed to be unique, which makes them useful for defining private properties or for creating shared, hidden values.
+A **Symbol** is a new data type in JavaScript that can be used to create unique object properties. Symbols are guaranteed to be unique, which makes them useful for defining private properties or for creating shared, hidden values.
 
 ```js
 const name = Symbol("name");
@@ -622,7 +595,7 @@ console.log(person[name]); // "John"
 
 ### 1. What is JSON?
 
-JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is based on a subset of the JavaScript programming language and is a text-based format, which means it uses human-readable text to transmit data objects consisting of attribute-value pairs. JSON is widely used for asynchronous browser/server communication and for data storage and data exchange formats in a variety of programming languages.
+**JSON (JavaScript Object Notation)** is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is based on a subset of the JavaScript programming language and is a text-based format, which means it uses human-readable text to transmit data objects consisting of attribute-value pairs. JSON is widely used for asynchronous browser/server communication and for data storage and data exchange formats in a variety of programming languages.
 
 ```json
 {
@@ -648,7 +621,7 @@ JSON (JavaScript Object Notation) is a lightweight data-interchange format that 
 
 ### 2. Converting JSON Data
 
-JSON data can be easily converted to JavaScript objects using the JSON.parse() method, and JavaScript objects can be converted to JSON data using the JSON.stringify() method.
+JSON data can be easily converted to JavaScript objects using the **JSON.parse()** method, and JavaScript objects can be converted to JSON data using the **JSON.stringify()** method.
 
 ```js
 // Converting JSON data to a JavaScript object
@@ -662,9 +635,9 @@ const json = JSON.stringify(person);
 console.log(json); // Output: {"name":"Jane Doe","age":30}
 ```
 
-### 3.Working with API's
+### 3.Working with API
 
-APIs (Application Programming Interfaces) often return data in JSON format, and JSON is often used to send data to APIs. When working with APIs, it is important to understand the structure of the JSON data being received, as well as how to make HTTP requests to retrieve the data.
+**API (Application Programming Interface)** often returns data in **JSON** format, and JSON is often used to send data to API. When working with API, it is important to understand the structure of the JSON data being received, as well as how to make HTTP requests to retrieve the data.
 
 ```js
 // Making a GET request to an API to retrieve data in JSON format
@@ -674,17 +647,17 @@ fetch("https://api.example.com/data")
   .catch((error) => console.error(error));
 ```
 
-In this example, the fetch function is used to make a GET request to the specified API endpoint. The response from the API is then passed to the response.json() method, which converts the response from a JSON string to a JavaScript object. The resulting object is then logged to the console.
+In this example, the fetch function is used to make a **GET** request to the specified **API endpoint**. The response from the API is then passed to the **response.json()** method, which converts the response from a JSON string to a JavaScript object. The resulting object is then logged to the console.
 
 ## AJAX (Asynchronous JavaScript and XML)
 
 ### 1. What is AJAX?
 
-AJAX stands for Asynchronous JavaScript and XML. It is a technique for creating fast and dynamic web pages by exchanging small amounts of data with the server, without reloading the entire page. AJAX allows web pages to update content dynamically, providing a more seamless and responsive user experience.
+**AJAX** stands for **Asynchronous JavaScript and XML**. It is a technique for creating fast and dynamic web pages by exchanging small amounts of data with the server, without reloading the entire page. AJAX allows web pages to update content dynamically, providing a more seamless and responsive user experience.
 
 ### 2. Sending HTTP Requests
 
-The primary way that AJAX requests are sent is through the XMLHttpRequest API in JavaScript. This API allows you to make HTTP requests to a server, and receive the response, asynchronously. Here's an example of how to send a GET request using XMLHttpRequest:
+The primary way that AJAX requests are sent is through the **XMLHttpRequest API** in JavaScript. This API allows you to make HTTP requests to a server, and receive the response, asynchronously. Here's an example of how to send a GET request using XMLHttpRequest:
 
 ```js
 var xhr = new XMLHttpRequest();
@@ -697,13 +670,13 @@ xhr.onreadystatechange = function () {
 xhr.send();
 ```
 
-In this example, we create a new XMLHttpRequest object and use the `open` method to specify the type of request (GET), the URL ([https://example.com/data.json](https://example.com/data.json)), and whether the request should be asynchronous (true). The `onreadystatechange` event handler is used to listen for changes in the request's status, and the `send` method is used to send the request.
+In this example, we create a **new XMLHttpRequest** object and use the **open** method to specify the type of request **(GET)**, the URL ([https://example.com/data.json](https://example.com/data.json)), and whether the request should be asynchronous **(true)**. The **onreadystatechange** event handler is used to listen for changes in the request's status, and the **send** method is used to send the request.
 
 ### 3. Handling Responses
 
-Once the server has responded to the request, the `onreadystatechange` event handler is executed, allowing you to handle the response. The `readyState` property of the XMLHttpRequest object indicates the current status of the request, and the `status` property indicates the HTTP status code returned by the server.
+Once the server has responded to the request, the **onreadystatechange** event handler is executed, allowing you to handle the response. The **readyState** property of the XMLHttpRequest object indicates the current status of the request, and the **status** property indicates the HTTP status code returned by the server.
 
-In the example above, we check if the `readyState` is `XMLHttpRequest.DONE` and the `status` is 200 (OK), indicating that the request was successful. The response from the server is stored in the `responseText` property of the XMLHttpRequest object, and can be accessed and processed as needed.
+In the example above, we check if the **readyState** is **XMLHttpRequest.DONE** and the **status** is **200** **(OK)**, indicating that the request was successful. The response from the server is stored in the **responseText** property of the XMLHttpRequest object, and can be accessed and processed as needed.
 
 Here's an example of how to parse a JSON response:
 
@@ -719,4 +692,4 @@ xhr.onreadystatechange = function () {
 xhr.send();
 ```
 
-In this example, we use the `JSON.parse` method to parse the JSON data returned by the server, and store the resulting JavaScript object in a variable `data`. The processed data can then be used to update the page dynamically.
+In this example, we use the **JSON.parse** method to parse the JSON data returned by the server, and store the resulting JavaScript object in a variable **data**. The processed data can then be used to update the page dynamically.

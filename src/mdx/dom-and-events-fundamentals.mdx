@@ -8,9 +8,9 @@ day: 6
 publishOn: 1675950660
 ---
 
-## 1. Understanding the Document Object Model (DOM) tree structure:
+## 1. Understanding the Document Object Model (DOM) tree structure
 
-The Document Object Model (DOM) is a tree-like structure that represents the structure of an HTML or XML document. Each element in the document is represented as a node in the DOM tree. The root of the tree is the document object, which contains a reference to all of the other elements in the document. These elements can be accessed using the DOM API and manipulated using JavaScript.
+**The Document Object Model (DOM)** is a tree-like structure that represents the structure of an HTML or XML document. Each element in the document is represented as a node in the DOM tree. The root of the tree is the document object, which contains a reference to all of the other elements in the document. These elements can be accessed using the DOM API and manipulated using JavaScript.
 
 ```html
 <html>
@@ -36,63 +36,63 @@ document
         |-- p
 ```
 
-## 2. Accessing and manipulating elements:
+## 2. Accessing and manipulating elements
 
-To access and manipulate elements in the DOM, you can use the DOM API and JavaScript. For example, you can use the `getElementById` method to select an element with a specific ID, like this:
+To access and manipulate elements in the DOM, you can use the **DOM API** and **JavaScript**. For example, you can use the **getElementById** method to select an element with a specific ID, like this:
 
 ```js
-var heading = document.getElementById("myHeading");
+const heading = document.getElementById("myHeading");
 ```
 
 You can then read or change the properties of the selected element, like this:
 
 ```js
 // Reading the text content of the heading
-var headingText = heading.textContent;
+const headingText = heading.textContent;
 
 // Changing the text content of the heading
 heading.textContent = "New Heading Text";
 ```
 
-You can also add or remove elements from the document using the DOM API. For example, you can create a new element and append it to the document like this:
+You can also add or remove elements from the document using the **DOM API**. For example, you can create a new element and append it to the document like this:
 
 ```js
 // Creating a new paragraph element
-var newParagraph = document.createElement("p");
+const newParagraph = document.createElement("p");
 newParagraph.textContent = "This is a new paragraph.";
 
 // Appending the new paragraph to the body
 document.body.appendChild(newParagraph);
 ```
 
-## 3. Traversing the DOM:
+## 3. Traversing the DOM
 
-You can traverse the DOM tree to find elements based on their relationships to other elements. For example, you can use the `childNodes` property to access the children of an element, like this:
+You can traverse the DOM tree to find elements based on their relationships to other elements. For example, you can use the **childNodes** property to access the children of an element, like this:
 
 ```js
-var bodyChildren = document.body.childNodes;
+const bodyChildren = document.body.childNodes;
 ```
 
-You can also use the `parentNode` property to access the parent of an element, like this:
+You can also use the **parentNode** property to access the parent of an element, like this:
 
 ```js
-var headingParent = heading.parentNode;
+const headingParent = heading.parentNode;
 ```
 
-## 4. Events and event handling:
+## 4. Events and event handling
 
-The DOM provides a way to respond to user interactions such as clicks, mouse movements, and keyboard input using event handlers. For example, you can attach a click event handler to a button element like this:
+The DOM provides a way to respond to user interactions such as **clicks**, **mouse movements**, and **keyboard input** using event handlers. For example, you can attach a click event handler to a button element like this:
 
 ```js
-var button = document.getElementById("myButton");
+const button = document.getElementById("myButton");
 button.addEventListener("click", function () {
   alert("Button was clicked!");
 });
 ```
 
-## 5. DOM manipulation with JavaScript:
+## 5. DOM manipulation with JavaScript
 
-The Document Object Model (DOM) is a hierarchical representation of the elements and content of a web page. JavaScript can be used to manipulate the DOM, changing the content and layout of a web page dynamically.
+The **Document Object Model (DOM)** is a hierarchical representation of the elements and content of a web page. JavaScript can be used to manipulate the DOM, changing the content and layout of a web page dynamically.
 
 ```html
 <!DOCTYPE html>
@@ -102,7 +102,7 @@ The Document Object Model (DOM) is a hierarchical representation of the elements
     <script>
       function changeText() {
         // Get the element with id "myP"
-        var p = document.getElementById("myP");
+        const p = document.getElementById("myP");
 
         // Change the content of the element
         p.innerHTML = "The text has been changed.";
@@ -116,9 +116,9 @@ The Document Object Model (DOM) is a hierarchical representation of the elements
 </html>
 ```
 
-## 6. Styling elements with the DOM:
+## 6. Styling elements with the DOM
 
-JavaScript can also be used to change the styles of elements using the DOM. The `style` property of an element can be used to access its inline styles, and the `className` property can be used to change its class.
+JavaScript can also be used to change the styles of elements using the DOM. The **style** property of an element can be used to access its inline styles, and the **className** property can be used to change its class.
 
 ```html
 <!DOCTYPE html>
@@ -128,7 +128,7 @@ JavaScript can also be used to change the styles of elements using the DOM. The 
     <script>
       function changeColor() {
         // Get the element with id "myDiv"
-        var div = document.getElementById("myDiv");
+        const div = document.getElementById("myDiv");
 
         // Change the background color of the element
         div.style.backgroundColor = "yellow";
@@ -145,9 +145,9 @@ JavaScript can also be used to change the styles of elements using the DOM. The 
 </html>
 ```
 
-## 7. Working with forms:
+## 7. Working with forms
 
-JavaScript can be used to interact with form elements such as text fields, radio buttons, checkboxes, and more. The DOM provides access to form elements through the `form` object and its elements can be accessed using the `elements` property.
+JavaScript can be used to interact with form elements such as text fields, radio buttons, checkboxes, and more. The DOM provides access to form elements through the **form** object and its elements can be accessed using the **elements** property.
 
 Here is an example of how to retrieve the value of a text field when a button is clicked:
 
@@ -159,13 +159,13 @@ Here is an example of how to retrieve the value of a text field when a button is
     <script>
       function getValue() {
         // Get the form element
-        var form = document.getElementById("myForm");
+        const form = document.getElementById("myForm");
 
         // Get the text field
-        var textField = form.elements.textField;
+        const textField = form.elements.textField;
 
         // Get the value of the text field
-        var value = textField.value;
+        const value = textField.value;
 
         // Display the value
         alert("The value is: " + value);

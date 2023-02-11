@@ -12,7 +12,7 @@ publishOn: 1675677710
 
 ### 1. Background color
 
-The CSS "background-color" property allows you to set the background color of an element.
+The CSS **background-color** property allows you to set the background color of an element.
 
 ```css
 body {
@@ -20,7 +20,7 @@ body {
 }
 ```
 
-This will set the background color of the `<body>` element to light blue.
+This will set the background color of the **body** element to light blue.
 
 You can also specify the background color using a hexadecimal value:
 
@@ -30,7 +30,7 @@ body {
 }
 ```
 
-This will also set the background color of the `<body>` element to light blue.
+This will also set the background color of the **body** element to light blue.
 
 In addition to color names and hexadecimal values, you can also specify the background color using the RGB or RGBA color models:
 
@@ -44,11 +44,11 @@ body {
 }
 ```
 
-The first example sets the background color of the `<body>` element to light blue using the RGB color model. The second example sets the background color using the RGBA color model, with an alpha value of 0.5 to make the background semi-transparent.
+The first example sets the background color of the **body** element to light blue using the RGB color model. The second example sets the background color using the RGBA color model, with an alpha value of 0.5 to make the background semi-transparent.
 
 ### 2. Background image
 
-A background image is an image that is placed behind the content of a webpage. To add a background image in CSS, you can use the `background-image` property along with the `background-size` and `background-repeat` properties.
+A background image is an image that is placed behind the content of a webpage. To add a background image in CSS, you can use the **background-image** property along with the **background-size** and **background-repeat** properties.
 
 - Simple background image:
 
@@ -95,12 +95,12 @@ body {
 
 ## XI. CSS Transitions
 
-The CSS `transition` property allows you to specify the transition effect when changing from one style to another. It makes an element smoothly change from one state to another, instead of an abrupt change.
+The CSS **transition** property allows you to specify the transition effect when changing from one style to another. It makes an element smoothly change from one state to another, instead of an abrupt change.
 
-- `Transition-property`: The `transition-property` property defines the CSS property that should be animated during a transition. For example, you can animate the color, width, height, or any other CSS property.
-- `Transition-duration`: The `transition-duration` property sets the duration of the transition effect. The value is specified in seconds or milliseconds.
-- `Transition-timing-function`: The `transition-timing-function` property defines the speed curve of the transition. This property determines how the animation progresses over time. Some common values include `linear`, `ease`, `ease-in`, `ease-out`, `ease-in-out`, and `cubic-bezier`.
-- `Transition-delay`: The `transition-delay` property sets a delay before the transition effect begins. The value is specified in seconds or milliseconds.
+- **Transition-property**: defines the CSS property that should be animated during a transition. For example, you can animate the color, width, height, or any other CSS property.
+- **Transition-duration**: sets the duration of the transition effect. The value is specified in seconds or milliseconds.
+- **Transition-timing-function**: defines the speed curve of the transition. This property determines how the animation progresses over time. Some common values include **linear**, **ease**, **ease-in**, **ease-out**, **ease-in-out**, and **cubic-bezier**.
+- **Transition-delay**: sets a delay before the transition effect begins. The value is specified in seconds or milliseconds.
 
 ```css
 button {
@@ -115,7 +115,7 @@ button:hover {
 }
 ```
 
-In this example, the transition effect is applied to the background-color property of the `<button>` element. When the mouse hovers over the button, the background color will smoothly change to light blue over a duration of 0.5 seconds, with an ease-in-out timing function and a delay of 0.2 seconds before the transition starts.
+In this example, the transition effect is applied to the background-color property of the **button** element. When the mouse hovers over the button, the background color will smoothly change to light blue over a duration of 0.5 seconds, with an ease-in-out timing function and a delay of 0.2 seconds before the transition starts.
 
 You can also combine multiple transition properties into a single shorthand property:
 
@@ -141,11 +141,11 @@ There are several CSS layout methods, including:
 
 Normal flow in CSS refers to the default layout behavior of HTML elements on a web page. In normal flow, elements are displayed one after another in the order they appear in the HTML document, and the size of an element is determined by its content.
 
-In normal flow, block-level elements, such as `div` and `p`, are stacked vertically and take up the full width of their parent container. Inline elements, such as `span` and `a`, only take up as much width as their content requires and can appear within a block-level element.
+In normal flow, block-level elements, such as **div** and **p**, are stacked vertically and take up the full width of their parent container. Inline elements, such as **span** and **a**, only take up as much width as their content requires and can appear within a block-level element.
 
-The `display` property in CSS is used to define the type of layout model that an HTML element should use. The value of the `display` property determines how an element is displayed within the document and affects its behavior, size, and position.
+The **display** property in CSS is used to define the type of layout model that an HTML element should use. The value of the **display** property determines how an element is displayed within the document and affects its behavior, size, and position.
 
-- `block`: A block-level element takes up the full width of its parent container and creates a new block formatting context. Example:
+- **block**: A block-level element takes up the full width of its parent container and creates a new block formatting context.
 
 ```css
 div {
@@ -153,7 +153,7 @@ div {
 }
 ```
 
-- `inline`: An inline element takes up only as much width as its content requires and does not create a new block formatting context. Example:
+- **inline**: An **inline** element takes up only as much width as its content requires and does not create a new block formatting context.
 
 ```css
 span {
@@ -161,7 +161,7 @@ span {
 }
 ```
 
-- `inline-block`: An inline-block element takes up only as much width as its content requires and allows for setting dimensions, such as width and height, and margin and padding. Example:
+- **inline-block**: An **inline-block** element takes up only as much width as its content requires and allows for setting dimensions, such as width and height, and margin and padding.
 
 ```css
 span {
@@ -170,7 +170,7 @@ span {
 }
 ```
 
-- `none`: An element with `display: none` will not be visible on the page and will take up no space. Example:
+- **none**: An element with **display: none** will not be visible on the page and will take up no space.
 
 ```css
 p {
@@ -180,9 +180,9 @@ p {
 
 ### 2. Positioning
 
-The CSS `position` property is used to specify the type of positioning method used for an element. There are four possible values for the `position` property: `static`, `relative`, `fixed`, and `absolute`.
+The CSS **position** property is used to specify the type of positioning method used for an element. There are four possible values for the **position** property: **static**, **relative**, **fixed**, and **absolute**.
 
-- `Static`: Elements are positioned according to the normal flow of the document and can't be positioned using top, bottom, left, and right properties. (default value)
+- **Static**: Elements are positioned according to the normal flow of the document and can't be positioned using top, bottom, left, and right properties. (default value)
 
 ```css
 .static {
@@ -190,7 +190,7 @@ The CSS `position` property is used to specify the type of positioning method us
 }
 ```
 
-- `Relative`: Elements are positioned relative to their normal position, and you can use top, bottom, left, and right properties to adjust the element's position.
+- **Relative**: Elements are positioned relative to their normal position, and you can use top, bottom, left, and right properties to adjust the element's position.
 
 ```css
 .relative {
@@ -200,7 +200,7 @@ The CSS `position` property is used to specify the type of positioning method us
 }
 ```
 
-- `Absolute`: Elements are positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed), but without leaving a gap in the normal flow of the document.
+- **Absolute**: Elements are positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed), but without leaving a gap in the normal flow of the document.
 
 ```css
 .absolute {
@@ -210,7 +210,7 @@ The CSS `position` property is used to specify the type of positioning method us
 }
 ```
 
-- `Fixed`: Elements are positioned relative to the viewport, and they will not move even if the page is scrolled.
+- **Fixed**: Elements are positioned relative to the viewport, and they will not move even if the page is scrolled.
 
 ```css
 .fixed {
@@ -358,15 +358,15 @@ CSS Grid Layout is a two-dimensional layout system that lets you create complex 
 
 CSS Animations allows you to apply animations to elements in your HTML documents. Animations are a series of changes to CSS styles over a set period of time.
 
-- `@keyframes`: used to define the different stages of an animation. The `@keyframes` rule specifies the CSS styles for each keyframe.
-- `animation-name`: used to specify the name of the `@keyframes` animation.
-- `animation-duration`: used to specify the duration of the animation. The duration is specified in seconds or milliseconds.
-- `animation-timing-function`: used to specify the speed curve of the animation. It controls the acceleration and deceleration of the animation.
-- `animation-delay`: used to specify the delay before the animation starts. The delay is specified in seconds or milliseconds.
-- `animation-iteration-count`: used to specify the number of times an animation should run.
-- `animation-direction`: used to specify the direction of the animation. The animation can run forwards, backwards, or alternate between the two.
-- `animation-fill-mode`: used to specify the state of the element when the animation is not playing.
-- `animation-play-state`:used to specify whether an animation is playing or paused.
+- **@keyframes**: used to define the different stages of an animation. The **@keyframes** rule specifies the CSS styles for each keyframe.
+- **animation-name**: used to specify the name of the **@keyframes** animation.
+- **animation-duration**: used to specify the duration of the animation. The duration is specified in seconds or milliseconds.
+- **animation-timing-function**: used to specify the speed curve of the animation. It controls the acceleration and deceleration of the animation.
+- **animation-delay**: used to specify the delay before the animation starts. The delay is specified in seconds or milliseconds.
+- **animation-iteration-count**: used to specify the number of times an animation should run.
+- **animation-direction**: used to specify the direction of the animation. The animation can run forwards, backwards, or alternate between the two.
+- **animation-fill-mode**: used to specify the state of the element when the animation is not playing.
+- **animation-play-state**:used to specify whether an animation is playing or paused.
 
 ```css
 div {
@@ -397,18 +397,18 @@ div {
 
 CSS Media Queries allow you to apply different styles to your HTML documents based on the conditions of the device displaying the content. This can be based on the type of device, such as a screen or a printer, or on specific features of the device, such as its width or height.
 
-**Media types:**
+### 1. Media types
 
-- `Screen`: The `screen` media type applies to devices with a screen, such as a computer, tablet, or smartphone.
-- `Print`: The `print` media type applies to devices used for printing, such as printers or print preview in a web browser.
-- `Speech`: The `speech` media type applies to speech synthesizers.
+- **Screen**: The **screen** media type applies to devices with a screen, such as a computer, tablet, or smartphone.
+- **Print**: The **print** media type applies to devices used for printing, such as printers or print preview in a web browser.
+- **Speech**: The **speech** media type applies to speech synthesizers.
 
-**Media features:**
+### 2. Media features
 
-- `Width`: The `width` media feature allows you to apply styles based on the width of the viewport of the device displaying the content.
-- `Height`: The `height` media feature allows you to apply styles based on the `height` of the viewport of the device displaying the content.
-- `Orientation`: The `orientation` media feature allows you to apply styles based on the orientation of the device displaying the content. The `orientation` can be either portrait or landscape.
-- `Resolution`: The `resolution` media feature allows you to apply styles based on the resolution of the device displaying the content. The `resolution` is specified in dots per inch (dpi) or dots per centimeter (dpcm).
+- **Width**: The **width** media feature allows you to apply styles based on the width of the viewport of the device displaying the content.
+- **Height**: The **height** media feature allows you to apply styles based on the **height** of the viewport of the device displaying the content.
+- **Orientation**: The **orientation** media feature allows you to apply styles based on the orientation of the device displaying the content. The **orientation** can be either portrait or landscape.
+- **Resolution**: The **resolution** media feature allows you to apply styles based on the resolution of the device displaying the content. The **resolution** is specified in dots per inch (dpi) or dots per centimeter (dpcm).
 
 ```css
 @media only screen and (min-width: 600px) {
@@ -434,9 +434,9 @@ CSS Media Queries allow you to apply different styles to your HTML documents bas
 
 CSS Preprocessors are scripting languages that extend the capabilities of CSS and make it easier to write and maintain CSS code. CSS preprocessors allow you to use variables, mixins, functions, and other features that are not available in regular CSS.
 
-**Sass (Syntactically Awesome Style Sheets):**
+### 1. Sass (Syntactically Awesome Style Sheets)
 
-- `Variables`: Sass allows you to define variables in your stylesheets, making it easier to maintain and update your code.
+- **Variables**: Sass allows you to define variables in your stylesheets, making it easier to maintain and update your code.
 
 ```css
 $primary-color: #333;
@@ -450,7 +450,7 @@ body {
 }
 ```
 
-- `Mixins`: Sass mixins allow you to reuse CSS styles, making it easier to maintain your code and avoid repetitive code.
+- **Mixins**: Sass mixins allow you to reuse CSS styles, making it easier to maintain your code and avoid repetitive code.
 
 ```scss
 @mixin border-radius($radius) {
@@ -465,7 +465,7 @@ body {
 }
 ```
 
-- `Nesting`: Sass allows you to nest CSS styles, making your code easier to read and maintain.
+- **Nesting**: Sass allows you to nest CSS styles, making your code easier to read and maintain.
 
 ```scss
 nav {
@@ -488,7 +488,7 @@ nav {
 }
 ```
 
-- `Partials`: Sass partials allow you to break your stylesheets into smaller, reusable chunks, making it easier to manage and maintain your code.
+- **Partials**: Sass partials allow you to break your stylesheets into smaller, reusable chunks, making it easier to manage and maintain your code.
 
 ```scss
 /* _header.scss */

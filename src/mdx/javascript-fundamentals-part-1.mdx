@@ -12,7 +12,7 @@ publishOn: 1675950658
 
 ### 1. What is JavaScript
 
-JavaScript is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
+**JavaScript** is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
 
 ### 2. JavaScript in Web Development
 
@@ -20,7 +20,7 @@ JavaScript is an essential tool for modern web development. With JavaScript, dev
 
 ### 3. JavaScript vs. Other Programming Languages
 
-JavaScript is often compared to other popular programming languages such as **Java** and **Python**. However, JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. In contrast, Java is a statically typed language, where variables must be declared with a specific data type. Python is a dynamically typed language as well, but it is more commonly used for scientific computing, machine learning, and artificial intelligence applications.
+JavaScript is often compared to other popular programming languages such as **Java** and **Python**. However, JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. In contrast, **Java** is a statically typed language, where variables must be declared with a specific data type. **Python** is a dynamically typed language as well, but it is more commonly used for scientific computing, machine learning, and artificial intelligence applications.
 
 ## Linking to JavaScript
 
@@ -44,11 +44,11 @@ document using the **script** tag without a **src** attribute.
 </html>
 ```
 
-It's important to note that the external JavaScript file should be placed in the same directory as the HTML document or should have the complete URL specified in the **src** attribute.
+> It's important to note that the external JavaScript file should be placed in the same directory as the HTML document or should have the complete URL specified in the **src** attribute.
 
 ### 2. External JavaScript file
 
-A standalone .js file that is linked to the HTML document using the **src** attribute in a **script** tag. This is the most common method of linking a JavaScript file.
+A standalone **.js** file that is linked to the HTML document using the **src** attribute in a **script** tag. This is the most common method of linking a JavaScript file.
 
 ```html
 <!DOCTYPE html>
@@ -70,62 +70,62 @@ In JavaScript, there are 7 data types:
 - **Number**: Used for numbers, including decimals and integers
 
 ```js
-var x = 10;
+let x = 10;
 ```
 
 - **String**: Used for textual data
 
 ```js
-var name = "John Doe";
+let name = "John Doe";
 ```
 
 - **Boolean**: Used for true/false values
 
 ```js
-var isStudent = true;
+let isStudent = true;
 ```
 
 - **Undefined**: A variable with no value assigned to it has the undefined type
 
 ```js
-var age;
+let age;
 ```
 
 - **Null**: Represents intentional non-existence of any object value
 
 ```js
-var person = null;
+let person = null;
 ```
 
 - **Object**: Used to store collections of data
 
-goCopy code
-
-`var car = {make: "Toyota", model: "Camry"};`
+```js
+let car = { make: "Toyota", model: "Camry" };
+```
 
 - **Symbol**: A unique identifier
 
 ```js
-var id = Symbol("id");
+let id = Symbol("id");
 ```
 
 ### 2. Variable Declaration
 
-A variable in JavaScript is declared using the `var`, `let`, or `const` keyword.
+A variable in JavaScript is declared using the **var**, **let**, or **const** keyword.
 
-- `var`: The `var` keyword is used to declare a variable with function scope, meaning that a variable declared with `var` is accessible within the function where it is declared
+- **var**: The **var** keyword is used to declare a variable with function scope, meaning that a variable declared with **var** is accessible within the function where it is declared
 
 ```js
 var x = 10;
 ```
 
-- `let`: The `let` keyword is used to declare a variable with block scope, meaning that a variable declared with `let` is only accessible within the block where it is declared
+- **let**: The **let** keyword is used to declare a variable with block scope, meaning that a variable declared with **let** is only accessible within the block where it is declared
 
 ```js
 let y = 20;
 ```
 
-- `const`: The `const` keyword is used to declare a constant with block scope. Its value cannot be changed once it is assigned
+- **const**: The **const** keyword is used to declare a constant with block scope. Its value cannot be changed once it is assigned
 
 ```js
 const z = 30;
@@ -163,43 +163,43 @@ const PI = 3.14;
 
 ### 1. Arithmetic Operators
 
-- Addition (`+`)
+- Addition (**+**)
 
 ```js
 console.log(2 + 3); // Output: 5
 ```
 
-- Subtraction (`-`)
+- Subtraction (**-**)
 
 ```js
 console.log(10 - 5); // Output: 5
 ```
 
-- Multiplication (`\*`)
+- Multiplication (**\***)
 
 ```js
 console.log(3 * 4); // Output: 12
 ```
 
-- Division (`/`)
+- Division (**/**)
 
 ```js
 console.log(10 / 5); // Output: 2
 ```
 
-- Modulus (`%`)
+- Modulus (**%**)
 
 ```js
 console.log(10 % 3); // Output: 1
 ```
 
-- Exponentiation (`**`)
+- Exponentiation (**\*\***)
 
 ```js
 console.log(2 ** 3); // Output: 8
 ```
 
-- Increment (`++`)
+- Increment (**++**)
 
 ```js
 let x = 5;
@@ -207,7 +207,7 @@ console.log(x++); // Output: 5
 console.log(x); // Output: 6
 ```
 
-- Decrement (`--`)
+- Decrement (**--**)
 
 ```js
 let x = 5;
@@ -217,49 +217,49 @@ console.log(x); // Output: 4`
 
 ### 2. Comparison Operators
 
-- Equal (`==`)
+- Equal (**==**)
 
 ```js
 console.log(10 == 10); // Output: true
 ```
 
-- Not equal (`!=`)
+- Not equal (**!=**)
 
 ```js
 console.log(10 != 5); // Output: true;
 ```
 
-- Strict equality (`===`)
+- Strict equality (**===**)
 
 ```js
 console.log(10 === "10"); // Output: false
 ```
 
-- Strict non-equality (`!==`)
+- Strict non-equality (**!==**)
 
 ```js
 console.log(10 !== "10"); // Output: true
 ```
 
-- Greater than (`>`)
+- Greater than (**>**)
 
 ```js
 console.log(10 > 5); // Output: true
 ```
 
-- Less than (`<`)
+- Less than (**\<**)
 
 ```js
 console.log(5 < 10); // Output: true
 ```
 
-- Greater than or equal (`>=`)
+- Greater than or equal (**>=**)
 
 ```js
 console.log(10 >= 10); // Output: true
 ```
 
-- Less than or equal (`<=`)
+- Less than or equal (**\<=**)
 
 ```js
 console.log(5 <= 10); // Output: true
@@ -267,19 +267,19 @@ console.log(5 <= 10); // Output: true
 
 ### 3. Logical Operators
 
-- And (`&&`)
+- And (**&&**)
 
 ```js
 console.log(true && false); // Output: false
 ```
 
-- Or (`||`)
+- Or (**||**)
 
 ```js
 console.log(true || false); // Output: true
 ```
 
-- Not (`!`)
+- Not (**!**)
 
 ```js
 console.log(!true); // Output: false
@@ -289,7 +289,7 @@ console.log(!true); // Output: false
 
 ### 1. if-else Statements
 
-The **if-else** statement is used to conditionally execute a block of code based on whether a boolean condition is true or false.
+The **if-else** statement is used to conditionally execute a block of code based on whether a boolean condition is **true** or **false**.
 
 ```js
 let age = 20;
@@ -301,7 +301,7 @@ if (age >= 18) {
 }
 ```
 
-In this example, the `if` statement checks whether the value of the `age` variable is greater than or equal to 18. If the condition is true, the code inside the first block `console.log("You are an adult.")` will be executed. If the condition is false, the code inside the `else` block `console.log("You are not an adult.")` will be executed.
+In this example, the **if** statement checks whether the value of the **age** variable is greater than or equal to 18. If the condition is true, the code inside the first block **console.log("You are an adult.")** will be executed. If the condition is false, the code inside the **else** block **console.log("You are not an adult.")** will be executed.
 
 Here's another example:
 
@@ -319,7 +319,7 @@ if (score >= 90) {
 }
 ```
 
-In this example, the code uses multiple `if-else` statements to determine a letter grade based on a numerical score. If the score is 90 or greater, the code will output "A". If the score is between 80 and 89, the code will output "B", and so on. If none of the conditions are met, the code inside the final `else` block `console.log("F")` will be executed.
+In this example, the code uses multiple **if-else** statements to determine a letter grade based on a numerical score. If the score is 90 or greater, the code will output "A". If the score is between 80 and 89, the code will output "B", and so on. If none of the conditions are met, the code inside the final **else** block **console.log("F")** will be executed.
 
 ### 2. switch Statements
 
@@ -342,11 +342,11 @@ switch (day) {
 }
 ```
 
-In the above example, the value of the expression `day` is compared against the different `case` labels. If a match is found, the code inside that case block is executed. The `break` statement is used to exit the switch statement and prevent the code from falling through to the next case block. If no case is matched, the code inside the `default` block will be executed.
+In the above example, the value of the expression **day** is compared against the different **case** labels. If a match is found, the code inside that case block is executed. The **break** statement is used to exit the switch statement and prevent the code from falling through to the next case block. If no case is matched, the code inside the **default** block will be executed.
 
 ### 3. The conditional (ternary) operator
 
-The conditional (ternary) operator in JavaScript is a shorthand way of writing an if...else statement. It's a shorthand way of evaluating a condition and returning a value based on whether the condition is **true** or **false**.
+The conditional (ternary) operator in JavaScript is a shorthand way of writing an **if...else** statement. It's a shorthand way of evaluating a condition and returning a value based on whether the condition is **true** or **false**.
 
 The syntax for the ternary operator is as follows:
 
@@ -370,7 +370,7 @@ In this example, the condition **(age >= 18)** is evaluated to see if **age** is
 
 ### 1. Type conversion
 
-Type coversion refers to the process of converting a value from one data type to another. JavaScript is a loosely typed language, meaning that you do not have to explicitly specify the data type of a variable. The language will automatically attempt to convert values to the appropriate data type as needed.
+**Type coversion** refers to the process of converting a value from one data type to another. JavaScript is a loosely typed language, meaning that you do not have to explicitly specify the data type of a variable. The language will automatically attempt to convert values to the appropriate data type as needed.
 
 Here are some examples of type conversion in JavaScript:
 
@@ -393,7 +393,7 @@ console.log(booleanValue); // Output: true
 
 ### 2. Type coercion
 
-Type coercion, on the other hand, is the implicit conversion of values from one data type to another. In JavaScript, type coercion can occur when you perform certain operations, such as comparison or arithmetic, with values of different data types.
+**Type coercion**, on the other hand, is the implicit conversion of values from one data type to another. In JavaScript, type coercion can occur when you perform certain operations, such as comparison or arithmetic, with values of different data types.
 And here are some examples of type coercion in JavaScript:
 
 ```js

@@ -14,7 +14,7 @@ In JavaScript, there are three ways to declare variables: **var**, **let**, and 
 
 ### 1. var
 
-The **var** keyword is used to declare a variable in JavaScript. Variables declared with **var** have function scoping, meaning that they are only accessible within the function in which they are declared. If a variable is declared with **var** outside of a function, it becomes a global variable and can be accessed from anywhere in your code.
+The **var** keyword is used to declare a variable in JavaScript. Variables declared with **var** have **function scoping**, meaning that they are only accessible within the function in which they are declared. If a variable is declared with **var** outside of a function, it becomes a global variable and can be accessed from anywhere in your code.
 
 ```js
 var x = 10;
@@ -31,7 +31,7 @@ console.log(y); // Output: Uncaught ReferenceError: y is not defined
 
 ### 2. let
 
-The **let** keyword is used to declare a block-scoped variable in JavaScript. Variables declared with **let** are only accessible within the block in which they are declared and any nested blocks.
+The **let** keyword is used to declare a **block-scoped variable** in JavaScript. Variables declared with **let** are only accessible within the block in which they are declared and any nested blocks.
 
 ```js
 let x = 10;
@@ -47,7 +47,7 @@ console.log(y); // Output: Uncaught ReferenceError: y is not defined
 
 ### 3. const
 
-The **const** keyword is used to declare a constant variable in JavaScript. Variables declared with **const** are block-scoped and cannot be reassigned once they have been declared.
+The **const** keyword is used to declare a constant variable in JavaScript. Variables declared with **const** are **block-scoped** and cannot be reassigned once they have been declared.
 
 ```js
 const x = 10;
@@ -67,7 +67,7 @@ y = 30; // Output: Uncaught ReferenceError: y is not defined
 
 ### 1. Block Scoping:
 
-In JavaScript, a block is defined as the code within a pair of curly braces `{}`. Variables declared with **let** or **const** are block-scoped, meaning they are only accessible within the block in which they are declared and any nested blocks.
+In JavaScript, a block is defined as the code within a pair of curly braces **(\{\})**. Variables declared with **let** or **const** are **block-scoped**, meaning they are only accessible within the block in which they are declared and any nested blocks.
 
 ```js
 if (true) {
@@ -109,7 +109,7 @@ function myFunction() {
 
 ### 1. Object Destructuring
 
-Object destructuring is a feature in JavaScript that allows you to extract properties from an object and assign them to variables with the same names as the properties. This can make working with objects more convenient, as you can extract the properties you need into variables that are easier to work with.
+**Object destructuring** is a feature in JavaScript that allows you to extract properties from an object and assign them to variables with the same names as the properties. This can make working with objects more convenient, as you can extract the properties you need into variables that are easier to work with.
 
 Here's an example of object destructuring in action:
 
@@ -145,7 +145,7 @@ console.log(personAge); // 32
 
 ### 2. Array Destructuring
 
-Array destructuring works similarly to object destructuring, but instead of extracting properties from an object, you extract elements from an array.
+**Array destructuring** works similarly to object destructuring, but instead of extracting properties from an object, you extract elements from an array.
 
 Here's an example of array destructuring in action:
 
@@ -163,7 +163,7 @@ In this example, the first three elements of the **numbers** array are extracted
 
 ### 3. Spread Operator
 
-The spread operator is another feature in JavaScript that allows you to spread elements of an array or properties of an object into a new array or object, respectively. This can be useful when you need to create a new array or object that is based on an existing array or object, but with some additions or modifications.
+The **spread operator** is another feature in JavaScript that allows you to spread elements of an array or properties of an object into a new array or object, respectively. This can be useful when you need to create a new array or object that is based on an existing array or object, but with some additions or modifications.
 
 Here's an example of using the spread operator to create a new array that includes elements from two separate arrays:
 
@@ -189,16 +189,16 @@ console.log(combinedObject); // { name: "John Doe", age: 32, occupation: "Develo
 
 ### 4. Use cases and examples
 
-- Object destructuring:
+- **Object destructuring**:
   When you need to extract values from an object and store them in separate variables, object destructuring can be a convenient way to do that.
-- Array destructuring:
+- **Array destructuring**:
   When you need to extract values from an array and store them in separate
 
-## Arrow Functions and this
+## Arrow Functions and "this" keyword
 
 ### 1. Arrow Functions
 
-Arrow functions are a shorthand syntax for defining functions in JavaScript. They were introduced in ECMAScript 6 and are a more concise and expressive way of defining functions.
+**Arrow functions** are a shorthand syntax for defining functions in JavaScript. They were introduced in ECMAScript 6 and are a more concise and expressive way of defining functions.
 
 Here's an example of an arrow function that takes two arguments and returns their sum:
 
@@ -213,12 +213,12 @@ In this example, the arrow function takes two arguments a and b, and returns the
 If an arrow function only takes a single argument, you can omit the parentheses:
 
 ```js
-const double = num => num \* 2;
+const double = (num) => num * 2;
 
 console.log(double(2)); // 4
 ```
 
-And if an arrow function has multiple statements, you can use curly braces and the return keyword:
+And if an arrow function has multiple statements, you can use **curly braces** and the **return** keyword:
 
 ```js
 const greet = (name) => {
@@ -229,13 +229,13 @@ const greet = (name) => {
 console.log(greet("John")); // "Hello, John" \n "Nice to meet you, John!"
 ```
 
-### 2. this keyword in arrow functions
+### 2. "this" keyword in arrow functions
 
-The this keyword in JavaScript refers to the object that the function is a method of, or to the global object if the function is not a method of any object.
+The **this** keyword in JavaScript refers to the object that the function is a method of, or to the global object if the function is not a method of any object.
 
-In regular functions, the value of this can be changed using call, apply, or bind. However, in arrow functions, the value of this is determined by the surrounding context, and cannot be changed.
+In **regular functions**, the value of this can be changed using **call**, **apply**, or **bind**. However, in arrow functions, the value of this is determined by the surrounding context, and cannot be changed.
 
-Here's an example that demonstrates the difference in behavior between regular functions and arrow functions with respect to the this keyword:
+Here's an example that demonstrates the difference in behavior between **regular functions** and **arrow functions** with respect to the this keyword:
 
 ```js
 const person = {
@@ -253,11 +253,11 @@ person.greet(); // "Hello, my name is John Doe"
 person.greetWithArrow(); // "Hello, my name is undefined"
 ```
 
-In this example, the greet method of the person object correctly logs the name of the person, because the value of this inside the method refers to the person object. However, the greetWithArrow method logs undefined for the name, because the value of this inside the arrow function refers to the global object, not the person object.
+In this example, the greet method of the person object correctly logs the name of the person, because the value of this inside the method refers to the person object. However, the **greetWithArrow** method logs **undefined** for the name, because the value of this inside the **arrow function** refers to the **global object**, not the **person object**.
 
 ### 3. How arrow functions and this are related
 
-Arrow functions and the this keyword are related because arrow functions have a lexical this keyword, meaning that the value of this inside an arrow function is determined by the surrounding context, and cannot be changed. This can be useful when you need to access the value of this from a nested function, as the value of this will be the same as the value of this in the surrounding context.
+**Arrow functions** and the **this** keyword are related because arrow functions have a lexical "this" keyword, meaning that the value of **this** inside an arrow function is determined by the surrounding context, and cannot be changed. This can be useful when you need to access the value of this from a nested function, as the value of this will be the same as the value of this in the surrounding context.
 
 Here's an example that demonstrates how this can be useful:
 
@@ -284,7 +284,7 @@ person.logHobbies();
 
 ### 1. Definition:
 
-ES6 classes are a syntax for creating classes in JavaScript. Classes provide a blueprint for creating objects (instances), providing initial values for state (member variables or properties), and implementations of behavior (member functions or methods).
+**ES6 classes** are a syntax for creating classes in JavaScript. Classes provide a blueprint for creating objects (instances), providing initial values for state (member variables or properties), and implementations of behavior (member functions or methods).
 
 Here is an example of a class definition in ES6:
 
@@ -306,7 +306,7 @@ dog.speak();
 
 ### 2. Inheritance:
 
-ES6 classes support inheritance, which allows you to create a new class that inherits properties and methods from an existing class. The new class is called a subclass and the existing class is called a superclass.
+ES6 classes support **inheritance**, which allows you to create a new class that inherits **properties** and **methods** from an existing class. The new class is called a **subclass** and the existing class is called a **superclass**.
 
 Here is an example of inheritance in ES6 classes:
 
@@ -341,7 +341,7 @@ dog.bark();
 
 ### 3. Method Overriding:
 
-Method overriding is the ability of a subclass to provide a different implementation of a method that is already defined in its superclass. To override a method, you need to define a method with the same name in the subclass. The **super** keyword is used to call the method of the same name in the superclass.
+**Method overriding** is the ability of a subclass to provide a different implementation of a method that is already defined in its superclass. To override a method, you need to define a method with the same name in the subclass. The **super** keyword is used to call the method of the same name in the superclass.
 
 Here is an example of method overriding in ES6 classes:
 
@@ -374,7 +374,7 @@ dog.speak();
 
 ### 4. Getters and Setters:
 
-ES6 classes support getters and setters, which are special methods that provide access to an object's properties. Getters are used to retrieve the value of a property and setters are used to set the value of a property.
+ES6 classes support **getters** and **setters**, which are special methods that provide access to an object's properties. **Getters** are used to retrieve the value of a property and **setters** are used to set the value of a property.
 
 Here is an example of getters and setters in ES6 classes:
 
@@ -403,11 +403,11 @@ console.log(dog.name);
 
 ### 5. Comparison with functional classes:
 
-Before ES6 classes, JavaScript used prototypes and constructor functions to create objects. These objects were often referred to as functional classes. While functional classes and ES6 classes both allow you to create objects and add methods and properties to them, there are some differences between them.
+Before ES6 classes, JavaScript used **prototypes** and **constructor functions** to create objects. These objects were often referred to as **functional classes**. While functional classes and ES6 classes both allow you to create objects and add methods and properties to them, there are some differences between them.
 
-One difference is syntax. Classes provide a cleaner, more familiar syntax for creating objects, especially for those who have experience with object-oriented languages. On the other hand, functional classes require a more functional programming style.
+One difference is **syntax**. Classes provide a cleaner, more familiar syntax for creating objects, especially for those who have experience with object-oriented languages. On the other hand, functional classes require a more functional programming style.
 
-Another difference is inheritance. ES6 classes support inheritance using the **extends** keyword, while functional classes require manual implementation of inheritance using prototypes.
+Another difference is **inheritance**. ES6 classes support inheritance using the **extends** keyword, while functional classes require manual implementation of inheritance using prototypes.
 
 Here is an example of a functional class:
 
@@ -425,13 +425,13 @@ dog.speak();
 // Output: 'dog makes a sound.'
 ```
 
-In conclusion, both ES6 classes and functional classes can be used to create objects in JavaScript, but ES6 classes provide a more modern syntax and built-in support for inheritance.
+In conclusion, both **ES6 classes** and **functional classes** can be used to create objects in JavaScript, but ES6 classes provide a more modern syntax and built-in support for inheritance.
 
 ## Modules and Imports/Exports
 
 ### 1. ES6 module system:
 
-ES6 (ECMAScript 6) introduced a new way to organize and reuse code in JavaScript called "modules". A module is a self-contained unit of code that exports values that can be imported and used by other parts of the application. This helps to keep code organized, reduces the chances of naming conflicts, and makes it easier to reuse code.
+**ES6 (ECMAScript 6)** introduced a new way to organize and reuse code in JavaScript called **"modules"**. A module is a self-contained unit of code that exports values that can be imported and used by other parts of the application. This helps to keep code organized, reduces the chances of naming conflicts, and makes it easier to reuse code.
 
 The following is a simple example of an ES6 module that exports a constant value:
 
@@ -450,9 +450,9 @@ console.log(PI); // 3.14
 
 ### 2. Named and Default exports:
 
-In ES6 modules, there are two types of exports: named exports and default exports.
+In ES6 modules, there are two types of exports: **named exports** and **default exports**.
 
-A named **export** is a value that is exported using the **export** keyword and can be imported using the same name:
+A **named export** is a value that is exported using the **export** keyword and can be imported using the same name:
 
 ```js
 // named.js
@@ -465,7 +465,7 @@ import { namedValue } from "./named.js";
 console.log(namedValue); // This is a named export
 ```
 
-A default export is a value that is exported using the **export default** syntax and can be imported using any name:
+A **default export** is a value that is exported using the **export default** syntax and can be imported using any name:
 
 ```js
 // default.js
@@ -480,7 +480,7 @@ console.log(defaultValue); // This is a default export
 
 ### 3. Importing and using external modules:
 
-External modules are modules that are not part of your application but are available in the npm registry. They can be installed using the npm command `npm install <module-name>` and then imported into your application using the **import** keyword.
+External modules are modules that are not part of your application but are available in the npm registry. They can be installed using the npm command **npm install \<module-name\>** and then imported into your application using the **import** keyword.
 
 For example, if you wanted to use the **lodash** library in your application, you would first install it using npm:
 
@@ -525,7 +525,7 @@ console.log(subtract(5, 3)); // 2
 
 ### 1. Introduction to Promises
 
-Promises are objects in JavaScript that represent the eventual completion or failure of an asynchronous operation. A Promise is essentially a placeholder for a value that we don’t have yet but will have in the future. This allows you to register callbacks to be called when the Promise is resolved or rejected, instead of writing lots of callback functions.
+**Promises** are objects in JavaScript that represent the eventual completion or failure of an asynchronous operation. A Promise is essentially a placeholder for a value that we don’t have yet but will have in the future. This allows you to register **callbacks** to be called when the Promise is **resolved** or **rejected**, instead of writing lots of callback functions.
 
 Here is a simple example of creating a Promise:
 
@@ -537,11 +537,11 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-In this example, we create a new Promise that will resolve with the string "Hello from myPromise!" after 1 second.
+In this example, we create a new Promise that will resolve with the string **"Hello from myPromise!"** after 1 second.
 
 ### 2. Using Promises for async operations
 
-One of the main use cases of Promises is to handle asynchronous operations, such as fetching data from an API or reading a file. Here's an example of using a Promise to fetch data from an API:
+One of the main use cases of Promises is to handle **asynchronous operations**, such as fetching data from an API or reading a file. Here's an example of using a Promise to fetch data from an API:
 
 ```js
 fetch("https://api.example.com/data")
@@ -554,7 +554,7 @@ In this example, we use the **fetch** function to retrieve data from the API. Th
 
 ### 3. Chaining Promises:
 
-Promises can be chained together to perform multiple asynchronous operations in a sequence. Here's an example:
+Promises can be chained together to perform multiple asynchronous operations in a sequence.
 
 ```js
 fetch("https://api.example.com/data")
@@ -572,7 +572,7 @@ In this example, we first retrieve data from the first API, then use the data to
 
 ### 4. Async/Await syntax:
 
-Async/Await is a syntax sugar over Promises that makes working with asynchronous code easier and more readable. With Async/Await, you can write asynchronous code that looks like it’s synchronous.
+**Async/Await** is a syntax sugar over Promises that makes working with asynchronous code easier and more readable. With Async/Await, you can write asynchronous code that looks like it’s synchronous.
 
 Here's the previous example using Async/Await:
 
@@ -598,11 +598,9 @@ In this example, we declare the **fetchData** function as **async**, which allow
 
 ### 1. String Interpolation:
 
-Template literals are a new way of creating strings in JavaScript, introduced in ECMAScript 6. They provide a more powerful and flexible way of creating strings, including string interpolation.
+**Template literals** are a new way of creating strings in JavaScript, introduced in ECMAScript 6. They provide a more powerful and flexible way of creating strings, including **string interpolation**.
 
-String interpolation allows you to embed expressions within a string. To use string interpolation with template literals, you wrap the string in backticks (\`) instead of quotes (' or "), and use the dollar sign and curly braces `` (`${expression}`) `` to embed expressions.
-
-Here's an example:
+**String interpolation** allows you to embed expressions within a string. To use string interpolation with template literals, you wrap the string in backticks **(\`)** instead of quotes **(' or ")**, and use the dollar sign and curly braces **(\`$\{expression}\`)** to embed expressions.
 
 ```js
 const name = "John Doe";
@@ -614,7 +612,7 @@ In this example, we use string interpolation to embed the value of the name vari
 
 ### 2. Multiline Strings:
 
-Template literals also allow you to create multiline strings, which can be useful when working with large chunks of text or when formatting HTML or XML. To create a multiline string, simply include line breaks within the string:
+**Template literals** also allow you to create multiline strings, which can be useful when working with large chunks of text or when formatting HTML or XML. To create a multiline string, simply include line breaks within the string:
 
 ```js
 const poem = `Roses are red,
@@ -634,7 +632,6 @@ Template literals can also be used to create HTML fragments, which can be useful
 ```js
 const name = "John Doe";
 const html = `
-
   <div>
     <h1>Hello, ${name}!</h1>
     <p>Welcome to the website.</p>
