@@ -16,11 +16,13 @@ const Lessons = async () => {
     <section className="h-full">
       <Container maxWidth="md">
         {/* Lessons */}
-        <div className="flex flex-col h-full py-4">
-          <ul className="flex flex-col gap-10 grow">
-            {orderByDay(lessons).map((lesson) => {
-              return <LessonCard key={uuid()} {...lesson.frontmatter} />;
-            })}
+        <div className="flex h-full flex-col py-4">
+          <ul className="flex grow flex-col gap-10">
+            {orderByDay(lessons)
+              .slice(lessons.length - 4)
+              .map((lesson) => {
+                return <LessonCard key={uuid()} {...lesson.frontmatter} />;
+              })}
           </ul>
           {/* Pagination */}
           {/* <div className="flex items-center justify-between py-1">

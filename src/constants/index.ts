@@ -9,16 +9,17 @@ export const BACKUP_LESSON_BANNER =
 
 export const OUR_TEAM = [
   {
-    name: "Huy Nguyen",
-    jobTitle: "Software Engineer",
-    image: "/assets/people/icons8-bald-man-in-green-jacket.svg",
-  },
-  {
     name: "Tien Tran",
     jobTitle: "Team Lead",
     image:
       "/assets/people/icons8-brown-curly-hair-lady-in-light-green-shirt.svg",
   },
+  {
+    name: "Te Hoang",
+    jobTitle: "Teaching Assistant",
+    image: "/assets/people/icons8-man-in-green-sweater.svg",
+  },
+
   {
     name: "Trang Le",
     jobTitle: "Teaching Assistant",
