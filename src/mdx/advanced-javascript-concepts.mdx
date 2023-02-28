@@ -4,8 +4,8 @@ slug: advanced-javascript-concepts
 excerpt: JavaScript is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
 imageUrl: https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80
 author: Huy Nguyen, Software Engineer
-day: 8
-publishOn: 1675950662
+day: 7
+publishOn: 1677580045
 ---
 
 ## I. Variable Declarations
@@ -65,7 +65,7 @@ y = 30; // Output: Uncaught ReferenceError: y is not defined
 
 ## II. Scoping
 
-### 1. Block Scoping:
+### 1. Block Scoping
 
 In JavaScript, a block is defined as the code within a pair of curly braces **(\{\})**. Variables declared with **let** or **const** are **block-scoped**, meaning they are only accessible within the block in which they are declared and any nested blocks.
 
@@ -78,7 +78,7 @@ if (true) {
 console.log(x); // Output: Uncaught ReferenceError: x is not defined
 ```
 
-### 2. Function Scoping:
+### 2. Function Scoping
 
 In JavaScript, variables declared with **var** within a function are only accessible within the function and are known as function-scoped variables.
 
@@ -92,7 +92,7 @@ myFunction();
 console.log(x); // Output: Uncaught ReferenceError: x is not defined
 ```
 
-### 3. Global Scoping:
+### 3. Global Scoping
 
 In JavaScript, variables declared outside of a function are known as global variables and are accessible from anywhere in your code. Variables declared with **var** or without any keyword are considered global variables if they are not declared within a function.
 
@@ -194,7 +194,7 @@ console.log(combinedObject); // { name: "John Doe", age: 32, occupation: "Develo
 - **Array destructuring**:
   When you need to extract values from an array and store them in separate
 
-## Arrow Functions and "this" keyword
+## IV. Arrow Functions and "this" keyword
 
 ### 1. Arrow Functions
 
@@ -280,9 +280,9 @@ person.logHobbies();
 // "John Doe enjoys traveling"
 ```
 
-## ES6 Class
+## V. ES6 Class
 
-### 1. Definition:
+### 1. Definition
 
 **ES6 classes** are a syntax for creating classes in JavaScript. Classes provide a blueprint for creating objects (instances), providing initial values for state (member variables or properties), and implementations of behavior (member functions or methods).
 
@@ -304,7 +304,7 @@ dog.speak();
 // Output: 'dog makes a sound.'
 ```
 
-### 2. Inheritance:
+### 2. Inheritance
 
 ES6 classes support **inheritance**, which allows you to create a new class that inherits **properties** and **methods** from an existing class. The new class is called a **subclass** and the existing class is called a **superclass**.
 
@@ -339,7 +339,7 @@ dog.bark();
 // Output: 'dog barks.'
 ```
 
-### 3. Method Overriding:
+### 3. Method Overriding
 
 **Method overriding** is the ability of a subclass to provide a different implementation of a method that is already defined in its superclass. To override a method, you need to define a method with the same name in the subclass. The **super** keyword is used to call the method of the same name in the superclass.
 
@@ -372,7 +372,7 @@ dog.speak();
 // Output: 'dog barks.'
 ```
 
-### 4. Getters and Setters:
+### 4. Getters and Setters
 
 ES6 classes support **getters** and **setters**, which are special methods that provide access to an object's properties. **Getters** are used to retrieve the value of a property and **setters** are used to set the value of a property.
 
@@ -401,7 +401,7 @@ console.log(dog.name);
 // Output: 'Labrador'
 ```
 
-### 5. Comparison with functional classes:
+### 5. Comparison with functional classes
 
 Before ES6 classes, JavaScript used **prototypes** and **constructor functions** to create objects. These objects were often referred to as **functional classes**. While functional classes and ES6 classes both allow you to create objects and add methods and properties to them, there are some differences between them.
 
@@ -427,9 +427,9 @@ dog.speak();
 
 In conclusion, both **ES6 classes** and **functional classes** can be used to create objects in JavaScript, but ES6 classes provide a more modern syntax and built-in support for inheritance.
 
-## Modules and Imports/Exports
+## VI. Modules and Imports/Exports
 
-### 1. ES6 module system:
+### 1. ES6 module system
 
 **ES6 (ECMAScript 6)** introduced a new way to organize and reuse code in JavaScript called **"modules"**. A module is a self-contained unit of code that exports values that can be imported and used by other parts of the application. This helps to keep code organized, reduces the chances of naming conflicts, and makes it easier to reuse code.
 
@@ -448,7 +448,7 @@ import { PI } from "./constant.js";
 console.log(PI); // 3.14
 ```
 
-### 2. Named and Default exports:
+### 2. Named and Default exports
 
 In ES6 modules, there are two types of exports: **named exports** and **default exports**.
 
@@ -478,7 +478,7 @@ import defaultValue from "./default.js";
 console.log(defaultValue); // This is a default export
 ```
 
-### 3. Importing and using external modules:
+### 3. Importing and using external modules
 
 External modules are modules that are not part of your application but are available in the npm registry. They can be installed using the npm command **npm install \<module-name\>** and then imported into your application using the **import** keyword.
 
@@ -496,7 +496,7 @@ import _ from "lodash";
 console.log(_.sum([1, 2, 3, 4, 5])); // 15
 ```
 
-### 4. Importing and using internal modules:
+### 4. Importing and using internal modules
 
 Internal modules are modules that are part of your application and are located in the same file system as the rest of your code. They can be imported using the **import** keyword just like external modules.
 
@@ -521,7 +521,7 @@ console.log(sum(1, 2)); // 3
 console.log(subtract(5, 3)); // 2
 ```
 
-## Promises and Async/Await
+## VII. Promises and Async/Await
 
 ### 1. Introduction to Promises
 
@@ -552,7 +552,7 @@ fetch("https://api.example.com/data")
 
 In this example, we use the **fetch** function to retrieve data from the API. The fetch function returns a Promise, which we can use with the **then** method to process the response data. If the Promise is rejected, we can use the **catch** method to handle the error.
 
-### 3. Chaining Promises:
+### 3. Chaining Promises
 
 Promises can be chained together to perform multiple asynchronous operations in a sequence.
 
@@ -570,7 +570,7 @@ fetch("https://api.example.com/data")
 
 In this example, we first retrieve data from the first API, then use the data to make a request to another API. The second request is also performed asynchronously and returns a Promise, which we can chain again with the **then** method.
 
-### 4. Async/Await syntax:
+### 4. Async/Await syntax
 
 **Async/Await** is a syntax sugar over Promises that makes working with asynchronous code easier and more readable. With Async/Await, you can write asynchronous code that looks like it’s synchronous.
 
@@ -594,9 +594,9 @@ async function fetchData() {
 
 In this example, we declare the **fetchData** function as **async**, which allows us to use the **await** keyword inside. The **await** keyword is used to wait for the Promise returned
 
-## Template Literals
+## VIII. Template Literals
 
-### 1. String Interpolation:
+### 1. String Interpolation
 
 **Template literals** are a new way of creating strings in JavaScript, introduced in ECMAScript 6. They provide a more powerful and flexible way of creating strings, including **string interpolation**.
 
@@ -610,7 +610,7 @@ console.log(`Hello, my name is ${name}.`);
 
 In this example, we use string interpolation to embed the value of the name variable within the string.
 
-### 2. Multiline Strings:
+### 2. Multiline Strings
 
 **Template literals** also allow you to create multiline strings, which can be useful when working with large chunks of text or when formatting HTML or XML. To create a multiline string, simply include line breaks within the string:
 
@@ -625,7 +625,7 @@ console.log(poem);
 
 In this example, we create a multiline string with the poem variable.
 
-### 3. HTML Fragments:
+### 3. HTML Fragments
 
 Template literals can also be used to create HTML fragments, which can be useful when dynamically generating HTML content:
 
@@ -643,7 +643,7 @@ document.body.innerHTML = html;
 
 In this example, we use string interpolation to embed the value of the name variable within the HTML fragment.
 
-### 4. Use Cases and Examples:
+### 4. Use Cases and Examples
 
 Template literals can be used in a variety of use cases, including:
 

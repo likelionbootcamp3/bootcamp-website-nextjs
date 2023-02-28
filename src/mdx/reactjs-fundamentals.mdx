@@ -1,0 +1,367 @@
+---
+title: ReactJS Fundamentals
+slug: reactjs-fundamentals
+excerpt: React is an open-source JavaScript library for building user interfaces. It was developed by Facebook and is now maintained by Facebook and a community of individual developers and companies. React allows developers to build fast and efficient user interfaces by breaking down complex UI into smaller, reusable components.
+imageUrl: https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
+author: Huy Nguyen, Software Engineer
+day: 9
+publishOn: 1675950659
+---
+
+## I. Introduction to React
+
+### 1. What is React
+
+**React** is an open-source JavaScript library for building user interfaces. It was developed by Facebook and is now maintained by Facebook and a community of individual developers and companies. React allows developers to build fast and efficient user interfaces by breaking down complex UI into smaller, reusable components.
+
+### 2. Benefits of using React
+
+- **Reusability**: Components in React can be reused, making the development process faster and more efficient.
+
+- **Virtual DOM**: React uses a virtual DOM, which improves the performance of updates to the UI.
+
+- **JSX**: React allows developers to use JSX, a syntax extension for JavaScript, to write HTML-like code within their JavaScript components.
+
+- **Server-side rendering**: React allows for server-side rendering, which can improve the performance and SEO of your website.
+
+- **Community**: React has a large and active community of developers who contribute to its development and provide support.
+
+### 3. React's history and evolution
+
+**React** was first introduced by Facebook in 2011 and was initially used to build dynamic user interfaces for Facebook's social media platform. Over the years, React has evolved and grown in popularity, with many companies and individual developers adopting it for their projects. In 2013, React was released as an open-source project and its development was taken over by a community of developers. Since then, React has become one of the most popular JavaScript libraries for building user interfaces, and its popularity continues to grow.
+
+## II. Setting up the React Development Environment
+
+### 1. Installing Node.js and npm
+
+**Node.js** is a JavaScript runtime built on Chrome's V8 JavaScript engine. npm (Node Package Manager) is a package manager for the JavaScript programming language. To install Node.js and npm, follow these steps:
+
+- Go to the official Node.js website (https://nodejs.org/) and download the latest version of Node.js for your operating system.
+- Run the installer and follow the on-screen instructions to complete the installation process.
+- Verify the installation by opening a command prompt or terminal and typing the following command:
+
+```bash
+node -v
+```
+
+This should print the version number of Node.js installed on your machine.
+
+### 2. Creating a React project with Create React App
+
+**Create React App** is a command line tool that helps you set up a new React project with a single command. To create a new React project using Create React App, follow these steps:
+
+Open a command prompt or terminal and navigate to the directory where you want to create the project.
+
+Type the following command to create a new React project:
+
+```bash
+npx create-react-app my-app
+```
+
+Replace "my-app" with the name of your project.
+
+### 3. Setting up a development server
+
+**Create React App** comes with a built-in development server that you can use to run your React application in the browser. To start the development server, follow these steps:
+
+- Navigate to the project directory in a command prompt or terminal.
+- Type the following command to start the development server:
+
+```bash
+npm start
+```
+
+This will start the development server and open your browser to http://localhost:3000, where you can view your React application. The development server will automatically reload the page whenever you make changes to your code.
+
+## III. React Components
+
+### 1. Understanding components
+
+**Components** are the building blocks of a React application. They are self-contained units that encapsulate logic and render a specific part of the UI. Components can either be stateful (having their own internal state) or stateless (not having their own state, but only rendering based on the props passed to them).
+
+### 2. Creating stateless and stateful components
+
+**Stateless components**, also known as "dumb" or "presentational" components, do not have their own state, and receive data and callbacks as props from the parent component. They are simple and only responsible for rendering the UI based on the props passed to them. They do not have any side-effects and do not change their own state.
+
+```jsx
+const Greeting = (props) => {
+  return <h1>Hello, {props.name}!</h1>;
+};
+```
+
+**Stateful components**, also known as "smart" or "container" components, manage their own state and logic. They are responsible for fetching and updating data, and often pass the data and callbacks as props to stateless components for rendering.
+
+```jsx
+import { useState } from "react";
+function GreetingContainer() {
+  const [name, setName] = useState("John Doe");
+
+  function onNameChange(e) {
+    setName(e.target.value);
+  }
+
+  return (
+    <div>
+      <input type="text" value={name} onChange={onNameChange} />
+      <Greeting name={name} />
+    </div>
+  );
+}
+```
+
+### 3. Importing and using React components
+
+React components can be imported from other files or modules and used in a parent component. This allows for reuse and modularization of code, making it easier to manage and maintain large React applications. To import a component, you can use the import statement and specify the path to the file that exports the component. Then, you can render the imported component inside the render method of a parent component by using the component as a JSX tag.
+
+## IV. JSX and Rendering
+
+### 1. What is JSX
+
+**JSX** (JavaScript XML) is a syntax extension for JavaScript that allows developers to write HTML-like code within their JavaScript code. It is used to describe the structure of the UI components that are to be rendered on the screen. JSX provides a way to mix HTML-like syntax with JavaScript code in a single file, making it easier for developers to write and maintain components.
+
+### 2. Understanding the render method
+
+The render method is a lifecycle method in React that is used to render the UI of a component. The render method takes in no arguments and returns a tree of React elements, which represent the UI of the component. The render method is called every time the component's state or props change, allowing the component to re-render itself whenever necessary. The render method should always be pure, meaning it should not modify the component's state or trigger side effects.
+
+### 3. Rendering components and JSX expressions
+
+In React, components can be rendered in two ways: as **components** and as **JSX expressions**. Components are reusable UI elements that can be defined as a separate class or function. They can be rendered within other components and can be passed props (data) to customize their behavior and appearance. JSX expressions are a way to embed JavaScript expressions within JSX code. These expressions can be used to dynamically render data or components within the UI. By combining components and JSX expressions, developers can create complex, dynamic UI structures with ease.
+
+## V. Props and State
+
+### 1. Understanding props
+
+In React, **props** (short for properties) are inputs passed from a parent component to a child component. Props allow you to pass data from a parent component to a child component and render dynamic content. For example, if you have a **Welcome** component, you can pass a user's name as a prop and display a personalized greeting:
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return <Welcome name="John" />;
+}
+```
+
+### 2. Using props to pass data to components
+
+In the above example, the **App** component passes the **name** prop to the **Welcome** component. To access the prop in the **Welcome** component, you can use the **props** object. You can use the prop to display dynamic content in the component.
+
+### 3. Understanding state
+
+**State** is a way of keeping track of a component's internal data that can change over time. Unlike props, state is owned by the component and can be changed within the component. State is used to update the component's UI when there is a change in the data.
+
+For example, if you have a **Clock** component that displays the current time, you can use state to store the current time and update it every second:
+
+```jsx
+function Clock(props) {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return <h1>The time is {time}</h1>;
+}
+```
+
+### 4. Updating state and re-rendering components
+
+When state changes, the component re-renders to reflect the updated state. In the **Clock** example, the **setTime** function is used to update the state, which triggers a re-render and updates the time displayed on the page. The **useEffect** hook is used to set an interval that updates the time every second.
+
+It's important to keep in mind that React updates the UI efficiently by only re-rendering the parts that have changed.
+
+## VI. Event Handling in React
+
+### 1. Understanding events
+
+In React, **events** are actions that occur in the user interface, such as a button click or a form submit. React provides a way to handle and respond to these events through event handlers. Event handlers are functions that are called in response to an event.
+
+### 2. Adding event handlers to components
+
+**Event handlers** can be added to components in React using the on prefix followed by the event name, such as onClick or onSubmit. Event handlers can be passed as props to components and are called when the corresponding event occurs.
+
+Here's an example of adding an event handler to a button component using a functional component:
+
+```jsx
+import React from "react";
+
+const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
+
+export default Button;
+```
+
+### 3. Updating state in response to events
+
+In React, **state** is a way to store and manage data that changes within a component. To update state in response to events, you can call setState in your event handler. The setState method takes an object that describes the updated state and merges it with the existing state.
+
+Here's an example of a component that updates its state in response to a button click event:
+
+```jsx
+import React, { useState } from "react";
+import Button from "./Button";
+
+const Example = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>You have clicked the button {count} times.</p>
+      <Button onClick={handleClick} text="Click me" />
+    </div>
+  );
+};
+
+export default Example;
+```
+
+In this example, the handleClick function updates the count state by calling setCount with count + 1. The updated count is then displayed on the screen. The Button component receives the handleClick function as a prop and calls it when the button is clicked.
+
+## VII. React Router
+
+### 1. Understanding React Router
+
+**React Router** is a popular library for routing in React applications. It allows you to easily manage the navigation and URL mapping in your single-page applications. With React Router, you can declare your routes using simple and intuitive syntax, and handle navigation between pages with ease.
+
+### 2. Setting up routes
+
+To set up routes in your React application using React Router, you will first need to install the library. You can do this by running the following command in your terminal:
+
+```bash
+npm install react-router-dom
+```
+
+Once the library is installed, you can import the **Route** component in your React component and use it to define the routes in your application. For example:
+
+```jsx
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+
+function App() {
+  return (
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+    </Router>
+  );
+}
+
+export default App;
+```
+
+In this example, we've defined three routes, one for the home page, one for the about page, and one for the contact page. The **exact** prop is used to ensure that the home route only matches the root URL exactly.
+
+### 3. Navigating between routes
+
+Once you have defined your routes, you can navigate between them by using the **Link** component from **react-router-dom**. For example:
+
+```jsx
+import React from "react";
+import { Link } from "react-router-dom";
+
+function Nav() {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
+export default Nav;
+```
+
+In this example, we've created a navigation component that uses the **Link** component to navigate between pages. When a user clicks on one of the links, the URL will change and the corresponding component for that route will be displayed.
+
+## VIII. React Hooks
+
+### 1. Understanding React Hooks
+
+**React Hooks** are a way to add state and other React features to functional components. Prior to React Hooks, state and component logic could only be achieved in class components. With React Hooks, you can extract state and logic from class components and reuse them across multiple functional components.
+
+**React Hooks** are named functions that allow you to "hook into" React features from functional components. There are several built-in hooks in React, such as **useState** and **useEffect**, that can be used to add state and side-effects to your functional components.
+
+### 2. Using state and effect hooks
+
+**useState**: This hook allows you to add state to a functional component. useState returns an array with two elements: the current state value and a function to update it.
+
+```jsx
+import React, { useState } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+**useEffect**: This hook allows you to run side-effects in a functional component, such as fetching data or updating the DOM. The first argument to useEffect is a callback that contains the logic for your side-effect, and the second argument is a list of dependencies.
+
+```jsx
+import React, { useState, useEffect } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+### 3. Implementing hooks in React components
+
+**Hooks** can be used in any functional component in your React application. Here is an example of using the **useState** and **useEffect** hooks in a functional component:
+
+```jsx
+import React, { useState, useEffect } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+In this example, **useState** is used to manage the state of the count variable, and **useEffect** is used to update the document title whenever the count changes.

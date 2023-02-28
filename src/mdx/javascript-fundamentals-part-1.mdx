@@ -5,7 +5,7 @@ excerpt: JavaScript is a high-level, dynamically typed, interpreted programming 
 imageUrl: https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
 author: Huy Nguyen, Software Engineer
 day: 4
-publishOn: 1675950658
+publishOn: 1677580045
 ---
 
 ## I. Introduction to JavaScript
@@ -16,19 +16,19 @@ publishOn: 1675950658
 
 ### 2. JavaScript in Web Development
 
-JavaScript is an essential tool for modern web development. With JavaScript, developers can create interactive and dynamic user interfaces, validate user input, and perform complex calculations and operations on the client-side (i.e., within the user's web browser). JavaScript can also be used to create real-time applications such as chat applications and online multiplayer games. Additionally, JavaScript can be used in conjunction with other web technologies such as HTML, CSS, and web APIs to create robust and responsive web applications.
+**JavaScript** is an essential tool for modern web development. With JavaScript, developers can create interactive and dynamic user interfaces, validate user input, and perform complex calculations and operations on the client-side (i.e., within the user's web browser). JavaScript can also be used to create real-time applications such as chat applications and online multiplayer games. Additionally, JavaScript can be used in conjunction with other web technologies such as HTML, CSS, and web APIs to create robust and responsive web applications.
 
 ### 3. JavaScript vs. Other Programming Languages
 
-JavaScript is often compared to other popular programming languages such as **Java** and **Python**. However, JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. In contrast, **Java** is a statically typed language, where variables must be declared with a specific data type. **Python** is a dynamically typed language as well, but it is more commonly used for scientific computing, machine learning, and artificial intelligence applications.
+**JavaScript** is often compared to other popular programming languages such as **Java** and **Python**. However, JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. In contrast, **Java** is a statically typed language, where variables must be declared with a specific data type. **Python** is a dynamically typed language as well, but it is more commonly used for scientific computing, machine learning, and artificial intelligence applications.
 
-## Linking to JavaScript
+## II. Linking to JavaScript
 
 There are two ways to link a JavaScript file to an HTML document:
 
 ### 1. Inline JavaScript
 
-JavaScript code can also be included directly in the HTML
+JavaScript code can also be included directly in the **HTML**
 document using the **script** tag without a **src** attribute.
 
 ```html
@@ -61,7 +61,7 @@ A standalone **.js** file that is linked to the HTML document using the **src** 
 </html>
 ```
 
-## Variables
+## III. Variables
 
 ### 1. Data Types
 
@@ -133,7 +133,7 @@ const z = 30;
 
 ### 3. Variable Naming Conventions
 
-In JavaScript, variable names can contain letters, digits, underscores, and dollar signs, but they cannot start with a digit. Some conventions for naming variables are:
+In JavaScript, **variable names** can contain letters, digits, underscores, and dollar signs, but they cannot start with a digit. Some conventions for naming variables are:
 
 - **Camel case**: The first letter of each word is in lowercase, and subsequent words have their first letter capitalized
 
@@ -159,7 +159,7 @@ var first_name = "John";
 const PI = 3.14;
 ```
 
-## Operators
+## IV. Operators
 
 ### 1. Arithmetic Operators
 
@@ -285,7 +285,7 @@ console.log(true || false); // Output: true
 console.log(!true); // Output: false
 ```
 
-## Conditional Statements
+## V. Conditional Statements
 
 ### 1. if-else Statements
 
@@ -366,7 +366,7 @@ console.log(message);
 
 In this example, the condition **(age >= 18)** is evaluated to see if **age** is greater than or equal to 18. If it is, the expression returns "You are an adult". If it isn't, the expression returns "You are a minor".
 
-## Type Conversion and Coercion
+## VI. Type Conversion and Coercion
 
 ### 1. Type conversion
 
@@ -410,7 +410,7 @@ console.log(x \* y); // Output: 84
 
 It's important to understand type conversion and coercion in JavaScript to prevent unexpected results in your code. In many cases, it may be better to explicitly convert values to the desired data type, rather than relying on implicit coercion.
 
-## Falsy and Truthy Values
+## VII. Falsy and Truthy Values
 
 In programming, the concept of truthiness and falsiness refers to values that are considered as equivalent to true or false in a boolean context. In other words, some values are treated as true, while others are treated as false.
 
@@ -451,9 +451,9 @@ if ("") {
 
 > It's important to note that the concept of truthiness and falsiness applies to many programming languages, but the specific values that are considered truthy or falsy may vary.
 
-## Equality Operators (== vs ===)
+## VIII. Equality Operators (== vs ===)
 
-The equality operators == and === are used in JavaScript to compare values and determine if they are equal.
+The equality operators **==** and **===** are used in JavaScript to compare values and determine if they are equal.
 
 ### 1. ==
 
@@ -473,7 +473,7 @@ The equality operators == and === are used in JavaScript to compare values and d
 
 It is generally recommended to use the **===** operator for equality comparisons in JavaScript, as it can help prevent unexpected behavior due to type coercion.
 
-## Boolean Logic
+## IX. Boolean Logic
 
 **Boolean logic** is a fundamental concept in computer programming, and JavaScript is no exception. A boolean value is either **true** or **false**, and it is used to represent binary logic. In JavaScript, you can use boolean values in control structures, such as if statements and while loops, to make decisions in your code.
 
@@ -487,7 +487,7 @@ let y = 5;
 console.log(x == y); // true
 ```
 
-### 2.Inequality (!=)
+### 2. Inequality (!=)
 
 The inequality operator (!=) compares two values to determine if they are not equal. If the values are not equal, the expression returns true, otherwise, it returns false.
 
@@ -497,7 +497,7 @@ let y = 7;
 console.log(x != y); // true
 ```
 
-### 3.Strict equality (===)
+### 3. Strict equality (===)
 
 The strict equality operator (===) compares two values for equality, and it also checks if the values are of the same type. If the values are equal and of the same type, the expression returns true, otherwise, it returns false.
 

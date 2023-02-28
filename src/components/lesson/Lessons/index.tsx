@@ -19,7 +19,7 @@ const Lessons = async () => {
         <div className="flex h-full flex-col py-4">
           <ul className="flex grow flex-col gap-10">
             {orderByDay(lessons)
-              .slice(lessons.length - 4)
+              .slice(lessons.length - 12)
               .map((lesson) => {
                 return <LessonCard key={uuid()} {...lesson.frontmatter} />;
               })}

@@ -1,0 +1,563 @@
+---
+title: Javascript Exercises And Solutions
+slug: javascript-exercises-and-solutions
+excerpt: JavaScript is a high-level, dynamically typed, interpreted programming language that is used primarily for building interactive and responsive websites. JavaScript can be used to add dynamic behavior to a website, such as updating content on a page without having to reload the entire page, or to perform complex calculations and other operations in real-time.
+imageUrl: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
+author: Huy Nguyen, Software Engineer
+day: 20
+publishOn: 1675950665
+---
+
+1. Write a function that takes two numbers as arguments and returns their sum.
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+```
+
+2. Write a function that takes an array of numbers and returns the sum of all the numbers in the array.
+
+```js
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+```
+
+3. Write a function that takes a string as an argument and returns the length of the string.
+
+```js
+function stringLength(str) {
+  return str.length;
+}
+```
+
+4. Write a function that takes an array of strings and returns the length of the longest string in the array.
+
+```js
+function longestString(arr) {
+  let maxLength = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > maxLength) {
+      maxLength = arr[i].length;
+    }
+  }
+  return maxLength;
+}
+```
+
+5. Write a function that takes a number as an argument and returns true if the number is even, and false otherwise.
+
+```js
+function isEven(num) {
+  return num % 2 === 0;
+}
+```
+
+6. Write a function that takes an array of numbers and returns a new array with only the even numbers from the original array.
+
+```js
+function evenNumbers(arr) {
+  let evenArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArr.push(arr[i]);
+    }
+  }
+  return evenArr;
+}
+```
+
+7. Write a function that takes a string as an argument and returns a new string with the first letter capitalized.
+
+```js
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+```
+
+8. Write a function that takes an array of strings and returns a new array with all the strings capitalized.
+
+```js
+function capitalizeArray(arr) {
+  let capitalizedArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    capitalizedArr.push(arr[i].toUpperCase());
+  }
+  return capitalizedArr;
+}
+```
+
+9. Write a function that takes an object and returns an array of all the keys in the object.
+
+```js
+function objectKeys(obj) {
+  return Object.keys(obj);
+}
+```
+
+10. Write a function that takes an object and returns an array of all the values in the object.
+
+```js
+function objectValues(obj) {
+  return Object.values(obj);
+}
+```
+
+11. Write a function that takes a string and a character as arguments and returns the number of times the character appears in the string.
+
+```js
+function countCharacter(str, char) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str.charAt(i) === char) {
+      count++;
+    }
+  }
+  return count;
+}
+```
+
+12. Write a function that takes an array of strings and a character as arguments and returns a new array with only the strings that contain the character.
+
+```js
+function stringsWithCharacter(arr, char) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(char) !== -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+```
+
+13. Write a function that takes an array of numbers and returns the largest number in the array.
+
+```js
+function largestNumber(arr) {
+  let largest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+    }
+  }
+  return largest;
+}
+```
+
+14. Write a function that takes an array of numbers and returns the smallest number in the array.
+
+```js
+function smallestNumber(arr) {
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
+}
+```
+
+15. Write a function that takes a string and returns true if the string is a palindrome (reads the same backwards and forwards), and false otherwise.
+
+```js
+function isPalindrome(str) {
+  let reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+```
+
+16. Write a function that takes an array of strings and returns a new array with only the palindrome strings.
+
+```js
+function palindromeStrings(arr) {
+  let palindromeArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (isPalindrome(arr[i])) {
+      palindromeArr.push(arr[i]);
+    }
+  }
+  return palindromeArr;
+}
+```
+
+17. Write a function that takes an array of objects and a key and returns a new array with only the objects that have the given key.
+
+```js
+function objectsWithKey(arr, key) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][key]) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+```
+
+18. Write a function that takes an array of objects and a property and returns a new array with the values of the given property for each object in the array.
+
+```js
+function objectPropertyValues(arr, prop) {
+  let propValuesArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][prop]) {
+      propValuesArr.push(arr[i][prop]);
+    }
+  }
+  return propValuesArr;
+}
+```
+
+19. Write a function that takes a string and returns a new string with the vowels removed.
+
+```js
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+```
+
+20. Write a function that takes an array of numbers as input and returns the sum of all the even numbers in the array.
+
+```js
+function sumEvenNumbers(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+```
+
+21. Write a function that takes a string as input and returns the reverse of the string.
+
+```js
+function reverseString(str) {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
+}
+```
+
+22. Write a function that takes an array of strings as input and returns the longest string in the array.
+
+```js
+function findLongestString(arr) {
+  let longestString = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestString.length) {
+      longestString = arr[i];
+    }
+  }
+  return longestString;
+}
+```
+
+23. Write a function that takes two arrays as input and returns an array with the elements that are common to both arrays.
+
+```js
+function findCommonElements(arr1, arr2) {
+  let commonElements = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      commonElements.push(arr1[i]);
+    }
+  }
+  return commonElements;
+}
+```
+
+24. Write a function that takes a string as input and returns the first non-repeated character in the string.
+
+```js
+function findFirstNonRepeatedChar(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+      return str[i];
+    }
+  }
+  return null;
+}
+```
+
+25. Write a function that takes an array of integers as input and returns the second largest number in the array.
+
+```js
+function findSecondLargestNumber(arr) {
+  let largest = arr[0];
+  let secondLargest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest;
+}
+```
+
+26. Write a function that takes a string as input and returns true if the string is a palindrome, false otherwise.
+
+```js
+function isPalindrome(str) {
+  let reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+```
+
+27. Write a function that takes an array of integers as input and returns an array with all the duplicates removed.
+
+```js
+function removeDuplicates(arr) {
+  let uniqueArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArr.includes(arr[i])) {
+      uniqueArr.push(arr[i]);
+    }
+  }
+  return uniqueArr;
+}
+```
+
+28. Write a function that takes a string as input and returns the most common character in the string.
+
+```js
+function findMostCommonChar(str) {
+  let charMap = {};
+  let maxChar = "";
+  let maxCount = 0;
+  for (let char of str) {
+    if (charMap[char]) {
+      charMap[char]++;
+    } else {
+      charMap[char] = 1;
+    }
+  }
+  for (let char in charMap) {
+    if (charMap[char] > maxCount) {
+      maxChar = char;
+      maxCount = charMap[char];
+    }
+  }
+  return maxChar;
+}
+```
+
+29. Write a function that takes an array of integers as input and returns the sum of all the numbers in the array that are divisible by 3 or 5.
+
+```js
+function sumDivisibleByThreeOrFive(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0 || arr[i] % 5 === 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+```
+
+31. Write a function that takes a string as input and returns a new string with the vowels removed.
+
+```js
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+```
+
+32. Write a function that takes an array of integers as input and returns an array with only the even numbers.
+
+```js
+function filterEvenNumbers(arr) {
+  return arr.filter((num) => num % 2 === 0);
+}
+```
+
+33. Write a function that takes an array of integers as input and returns the product of all the numbers in the array.
+
+```js
+function getProduct(arr) {
+  return arr.reduce((acc, cur) => acc * cur, 1);
+}
+```
+
+34. Write a function that takes two strings as input and returns true if the second string is a rotation of the first string, false otherwise.
+
+```js
+function isRotation(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  return (str1 + str1).includes(str2);
+}
+```
+
+35. Write a function that takes an array of integers as input and returns the sum of all the numbers in the array that are between 10 and 20.
+
+```js
+function sumBetweenTenAndTwenty(arr) {
+  return arr.reduce((acc, cur) => {
+    if (cur >= 10 && cur <= 20) {
+      acc += cur;
+    }
+    return acc;
+  }, 0);
+}
+```
+
+36. Write a function that takes a string as input and returns true if the string contains only unique characters, false otherwise.
+
+```js
+function hasUniqueChars(str) {
+  let charSet = new Set(str);
+  return charSet.size === str.length;
+}
+```
+
+37. Write a function that takes an array of integers as input and returns an array with only the odd numbers.
+
+```js
+function filterOddNumbers(arr) {
+  return arr.filter((num) => num % 2 !== 0);
+}
+```
+
+38. Write a function that takes a string as input and returns the number of words in the string.
+
+```js
+function countWords(str) {
+  return str.split(" ").length;
+}
+```
+
+39. Write a function that takes an array of integers as input and returns an array with only the positive numbers.
+
+```js
+function filterPositiveNumbers(arr) {
+  return arr.filter((num) => num > 0);
+}
+```
+
+40. Write a function that takes a string as input and returns true if the string is a pangram, false otherwise. A pangram is a sentence that contains every letter of the alphabet at least once.
+
+```js
+function isPangram(str) {
+  let charSet = new Set(str.toLowerCase().replace(/[^a-z]/g, ""));
+  return charSet.size === 26;
+}
+```
+
+41. Write a function that takes an array of integers as input and returns the highest product that can be obtained by multiplying any three integers.
+
+```js
+function highestProduct(arr) {
+arr.sort((a, b) => a - b);
+let len = arr.length;
+let product1 = arr[len - 1] _ arr[len - 2] _ arr[len - 3];
+let product2 = arr[0] _ arr[1] _ arr[len - 1];
+return Math.max(product1, product2);
+}
+
+```
+
+42. Write a function that takes a string as input and returns the string with the characters reversed.
+
+```js
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+```
+
+43. Write a function that takes an array of integers as input and returns the maximum difference between any two elements in the array, where the larger element comes after the smaller element.
+
+```js
+function maxDifference(arr) {
+  let maxDiff = -1;
+  let minElement = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < minElement) {
+      minElement = arr[i];
+    } else {
+      maxDiff = Math.max(maxDiff, arr[i] - minElement);
+    }
+  }
+  return maxDiff;
+}
+```
+
+44. Write a function that takes a string as input and returns true if the string is a palindrome, false otherwise.
+
+```js
+function isPalindrome(str) {
+  let reversedStr = str.split("").reverse().join("");
+  return str === reversedStr;
+}
+```
+
+45. Write a function that takes an array of integers as input and returns an array with only the numbers that appear more than once in the input array.
+
+```js
+function findDuplicates(arr) {
+  let charMap = {};
+  let duplicates = [];
+  for (let num of arr) {
+    if (charMap[num]) {
+      duplicates.push(num);
+    } else {
+      charMap[num] = true;
+    }
+  }
+  return duplicates;
+}
+```
+
+46. Write a function that takes a string as input and returns the first non-repeating character in the string, or null if there are no non-repeating characters.
+
+```js
+function firstNonRepeatingChar(str) {
+  let charMap = {};
+  for (let char of str) {
+    if (charMap[char]) {
+      charMap[char]++;
+    } else {
+      charMap[char] = 1;
+    }
+  }
+  for (let char of str) {
+    if (charMap[char] === 1) {
+      return char;
+    }
+  }
+  return null;
+}
+```
+
+47. Write a function that takes an array of integers as input and returns the array sorted in ascending order using the bubble sort algorithm.
+
+```js
+function bubbleSort(arr) {
+  let len = arr.length;
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = 0; j < len - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+```
