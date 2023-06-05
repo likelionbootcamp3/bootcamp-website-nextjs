@@ -9,9 +9,9 @@ const LessonCard = ({ title, excerpt, publishOn, slug, day }: ILesson) => {
         <h2 className="text-xl font-medium text-black">
           Day {day}: {title}
         </h2>
-        <time className="shrink-0 px-2 text-sm leading-loose">
+        {/* <time className="px-2 text-sm leading-loose shrink-0">
           {publishOn ? getFullDate(publishOn) : "Now"}
-        </time>
+        </time> */}
       </div>
       <div>
         <p className="line-clamp-3">{excerpt}</p>

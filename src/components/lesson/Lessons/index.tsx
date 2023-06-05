@@ -1,8 +1,4 @@
 import LessonCard from "./LessonCard";
-import {
-  ArrowLongLeftIcon,
-  ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
 import { getLessons } from "@/services/lesson";
 import { v4 as uuid } from "uuid";
 import _ from "lodash";

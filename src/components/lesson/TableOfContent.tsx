@@ -5,7 +5,7 @@ import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import clsx from "clsx";
 import { useState } from "react";
 
-const Headings = ({
+const TocHeadings = ({
   headings,
   activeId,
 }: {
@@ -68,7 +68,7 @@ const TableOfContent = () => {
       <h4 className="mb-4 font-medium uppercase tracking-widest">
         Table of Contents
       </h4>
-      <Headings headings={nestedHeadings} activeId={activeId} />
+      <TocHeadings headings={nestedHeadings} activeId={activeId} />
     </div>
   );
 };
